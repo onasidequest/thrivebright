@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ThriveBrightLife | Tips That Actually Work.</title>
+<meta name="description" content="Tips, tools, and strategies to earn more, spend less, and live smarter. Get our free AI Side Hustle guide.">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['"Playfair Display"', 'serif'],
+        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+      },
+      colors: {
+        navy: { 900: '#0f0f23', 800: '#1a1a3e', 700: '#2d1b69' },
+        accent: { purple: '#6366f1', pink: '#ec4899', gold: '#f59e0b' },
+      }
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Plus Jakarta Sans', sans-serif; }
+.gradient-text { background: linear-gradient(135deg, #a78bfa, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.glow { box-shadow: 0 0 60px rgba(99, 102, 241, 0.3); }
+.card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2); }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.float { animation: float 6s ease-in-out infinite; }
+@keyframes fade-up { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+.fade-up { opacity: 0; animation: fade-up 0.8s ease-out forwards; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.grain::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); opacity: 0.4; pointer-events: none; z-index: 0; }
+.blob-1 { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%); border-radius: 50%; top: -200px; right: -200px; pointer-events: none; }
+.blob-2 { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(236,72,153,0.08) 0%, transparent 70%); border-radius: 50%; bottom: -100px; left: -100px; pointer-events: none; }
+input[type="email"]:focus { outline: none; box-shadow: 0 0 0 3px rgba(99,102,241,0.3); }
+.scroll-reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
+.scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body class="bg-navy-900 text-white grain">
+
+<!-- NAV -->
+<nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-navy-900/80 border-b border-white/5">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="#" class="font-display text-xl font-bold">Thrive<span class="text-accent-purple">Bright</span></a>
+    <div class="hidden md:flex items-center gap-8 text-sm text-gray-400">
+      <a href="#topics" class="hover:text-white transition">Topics</a>
+      <a href="#blog" class="hover:text-white transition">Blog</a>
+      <a href="#free-guide" class="hover:text-white transition">Free Guide</a>
+      <a href="#products" class="hover:text-white transition">Products</a>
+    </div>
+    <a href="#free-guide" class="bg-accent-purple hover:bg-purple-500 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:shadow-lg hover:shadow-purple-500/25">Get Free Guide</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative min-h-[75vh] flex items-center pt-20 overflow-hidden">
+  <div class="blob-1 float"></div>
+  <div class="blob-2"></div>
+  <div class="max-w-6xl mx-auto px-6 py-12 relative z-10">
+    <div class="max-w-3xl">
+      <div class="fade-up inline-block bg-white/5 border border-white/10 rounded-full px-4 py-1.5 text-sm text-purple-300 font-medium mb-8">
+        Free: "5 AI Side Hustles You Can Start This Weekend"
+      </div>
+      <h1 class="fade-up delay-1 font-display text-5xl md:text-7xl font-bold leading-[1.1] mb-6">
+        Tips That<br><span class="gradient-text">Actually Work.</span>
+      </h1>
+      <p class="fade-up delay-2 text-lg md:text-xl text-gray-400 max-w-xl mb-10 leading-relaxed">
+        Tips, tools, and strategies to earn more, spend less, and live smarter. From side hustles to savings hacks, we help you build the life you want.
+      </p>
+      
+      <!-- Email Capture -->
+      <form id="free-guide" class="fade-up delay-3 flex flex-col sm:flex-row gap-3 max-w-lg mb-6" action="https://formsubmit.co/thrivebrightlife@gmail.com" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required class="flex-1 bg-white/5 border border-white/10 rounded-full px-6 py-3.5 text-white placeholder-gray-500 text-base">
+        <button type="submit" class="bg-gradient-to-r from-accent-purple to-purple-500 hover:from-purple-500 hover:to-accent-purple text-white px-8 py-3.5 rounded-full font-semibold text-base transition-all hover:shadow-lg hover:shadow-purple-500/25 whitespace-nowrap">
+          Get Free Guide →
+        </button>
+      </form>
+      <p class="fade-up delay-4 text-sm text-gray-500">
+        Free: "5 AI Side Hustles You Can Start This Weekend" + weekly tips. No spam, ever.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE COVER -->
+<section class="relative py-10 overflow-hidden" id="topics">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-8 scroll-reveal">
+      <p class="text-accent-purple font-semibold text-sm tracking-widest uppercase mb-3">What We Cover</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">Everything You Need to<br>Thrive</h2>
+      <p class="text-gray-400 max-w-xl mx-auto">Practical advice you can actually use. No fluff, no get-rich-quick schemes.</p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="scroll-reveal card-hover bg-white/[0.03] border border-white/[0.06] rounded-2xl p-7 text-center">
+        <div class="w-14 h-14 bg-accent-purple/20 rounded-2xl flex items-center justify-center text-2xl mb-5 mx-auto">💰</div>
+        <h3 class="font-display text-lg font-bold mb-2">Side Hustles</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Proven ways to earn extra income on your own schedule. From freelancing to digital products.</p>
+      </div>
+      
+      <div class="scroll-reveal card-hover bg-white/[0.03] border border-white/[0.06] rounded-2xl p-7 text-center">
+        <div class="w-14 h-14 bg-emerald-500/20 rounded-2xl flex items-center justify-center text-2xl mb-5 mx-auto">🏦</div>
+        <h3 class="font-display text-lg font-bold mb-2">Money Tips</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Save smarter, budget better, and make your money work harder. Simple strategies that add up.</p>
+      </div>
+      
+      <div class="scroll-reveal card-hover bg-white/[0.03] border border-white/[0.06] rounded-2xl p-7 text-center">
+        <div class="w-14 h-14 bg-amber-500/20 rounded-2xl flex items-center justify-center text-2xl mb-5 mx-auto">⚡</div>
+        <h3 class="font-display text-lg font-bold mb-2">Productivity</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Work less, get more done. Habits, tools, and systems to reclaim your time.</p>
+      </div>
+      
+      <div class="scroll-reveal card-hover bg-white/[0.03] border border-white/[0.06] rounded-2xl p-7 text-center">
+        <div class="w-14 h-14 bg-pink-500/20 rounded-2xl flex items-center justify-center text-2xl mb-5 mx-auto">🤖</div>
+        <h3 class="font-display text-lg font-bold mb-2">AI Tools</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Use AI to automate tasks, create content, and build income streams. The future is now.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="py-10 relative overflow-hidden" id="blog">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-8 scroll-reveal">
+      <p class="text-accent-purple font-semibold text-sm tracking-widest uppercase mb-3">Latest Posts</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">From the Blog</h2>
+      <p class="text-gray-400 max-w-xl mx-auto">Actionable guides, real strategies, and honest takes on making money smarter.</p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-6">
+      <a href="blog/5-ai-side-hustles.html" class="scroll-reveal card-hover bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden group">
+        <div class="h-40 bg-gradient-to-br from-accent-purple/30 to-pink-500/20 flex items-center justify-center text-5xl">🤖</div>
+        <div class="p-6">
+          <div class="text-xs text-purple-400 font-semibold uppercase tracking-wider mb-2">AI + Side Hustles</div>
+          <h3 class="font-display text-lg font-bold mb-2 group-hover:text-purple-300 transition">5 AI Side Hustles You Can Start This Weekend</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Real strategies, realistic income ranges, and step-by-step plans. No experience needed.</p>
+        </div>
+      </a>
+      
+      <a href="blog/ai-business-2-hours.html" class="scroll-reveal card-hover bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden group">
+        <div class="h-40 bg-gradient-to-br from-emerald-500/30 to-teal-500/20 flex items-center justify-center text-5xl">⚡</div>
+        <div class="p-6">
+          <div class="text-xs text-emerald-400 font-semibold uppercase tracking-wider mb-2">Productivity</div>
+          <h3 class="font-display text-lg font-bold mb-2 group-hover:text-emerald-300 transition">How I Use AI to Run a Side Business in 2 Hours a Day</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">The myth of the 80-hour hustle week. Here's what my actual daily routine looks like.</p>
+        </div>
+      </a>
+      
+      <a href="blog/selling-digital-products.html" class="scroll-reveal card-hover bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden group">
+        <div class="h-40 bg-gradient-to-br from-amber-500/30 to-orange-500/20 flex items-center justify-center text-5xl">💰</div>
+        <div class="p-6">
+          <div class="text-xs text-amber-400 font-semibold uppercase tracking-wider mb-2">Digital Products</div>
+          <h3 class="font-display text-lg font-bold mb-2 group-hover:text-amber-300 transition">The Beginner's Guide to Selling Digital Products Online</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">No inventory, no shipping, infinite margin. Here's how to get started in 2026.</p>
+        </div>
+      </a>
+
+      <a href="blog/openclaw-setup-guide.html" class="scroll-reveal card-hover bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden group">
+        <div class="h-40 bg-gradient-to-br from-cyan-500/30 to-blue-500/20 flex items-center justify-center text-5xl">🛠️</div>
+        <div class="p-6">
+          <div class="text-xs text-cyan-400 font-semibold uppercase tracking-wider mb-2">AI Agents</div>
+          <h3 class="font-display text-lg font-bold mb-2 group-hover:text-cyan-300 transition">OpenClaw: How to Set Up Your Own AI Agent</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Your own 24/7 AI assistant. Complete setup guide from installation to automation.</p>
+        </div>
+      </a>
+
+      <a href="blog/chatgpt-prompts-make-money.html" class="scroll-reveal card-hover bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden group">
+        <div class="h-40 bg-gradient-to-br from-rose-500/30 to-pink-500/20 flex items-center justify-center text-5xl">💬</div>
+        <div class="p-6">
+          <div class="text-xs text-rose-400 font-semibold uppercase tracking-wider mb-2">ChatGPT</div>
+          <h3 class="font-display text-lg font-bold mb-2 group-hover:text-rose-300 transition">10 ChatGPT Prompts That Actually Make Money</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Skip the garbage prompt lists. These 10 directly lead to real income.</p>
+        </div>
+      </a>
+
+      <a href="blog/pinterest-digital-products.html" class="scroll-reveal card-hover bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden group">
+        <div class="h-40 bg-gradient-to-br from-red-500/30 to-rose-500/20 flex items-center justify-center text-5xl">📌</div>
+        <div class="p-6">
+          <div class="text-xs text-red-400 font-semibold uppercase tracking-wider mb-2">Marketing</div>
+          <h3 class="font-display text-lg font-bold mb-2 group-hover:text-red-300 transition">Pinterest for Digital Products: The Free Traffic Nobody Talks About</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">It's a search engine, not social media. Content that drives traffic for months.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="py-10 relative overflow-hidden" id="products">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="scroll-reveal bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/[0.08] rounded-3xl p-8 md:p-12">
+      <div class="text-center mb-10">
+        <div class="inline-block bg-accent-purple/20 text-purple-300 rounded-full px-4 py-1.5 text-sm font-semibold mb-6">
+          🎁 Free Download
+        </div>
+        <h2 class="font-display text-4xl md:text-6xl font-bold mb-5">5 AI Side Hustles You Can<br>Start This Weekend</h2>
+        <p class="text-gray-400 text-lg max-w-lg mx-auto">Our most popular guide. Real strategies, realistic income ranges, and step-by-step action plans.</p>
+      </div>
+      
+      <div class="space-y-4 max-w-lg mx-auto mb-10">
+        <div class="flex items-center gap-3 text-sm text-gray-300">
+          <span class="text-accent-purple text-lg">✓</span> AI-Powered Freelancing ($1K-$5K/mo)
+        </div>
+        <div class="flex items-center gap-3 text-sm text-gray-300">
+          <span class="text-accent-purple text-lg">✓</span> Digital Product Empire ($500-$3K/mo)
+        </div>
+        <div class="flex items-center gap-3 text-sm text-gray-300">
+          <span class="text-accent-purple text-lg">✓</span> Content Creation Machine ($500-$10K/mo)
+        </div>
+        <div class="flex items-center gap-3 text-sm text-gray-300">
+          <span class="text-accent-purple text-lg">✓</span> AI Consulting ($2K-$10K/mo)
+        </div>
+        <div class="flex items-center gap-3 text-sm text-gray-300">
+          <span class="text-accent-purple text-lg">✓</span> Research & Reports ($1K-$5K/mo)
+        </div>
+      </div>
+      
+      <form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-3" action="https://formsubmit.co/thrivebrightlife@gmail.com" method="POST">
+        <input type="email" name="email" placeholder="Your best email" required class="flex-1 bg-white/5 border border-white/10 rounded-full px-6 py-3.5 text-white placeholder-gray-500 text-base">
+        <button type="submit" class="bg-gradient-to-r from-accent-purple to-purple-500 text-white px-8 py-3.5 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-purple-500/25 whitespace-nowrap">
+          Download Free →
+        </button>
+      </form>
+      <p class="text-xs text-gray-600 text-center">Instant PDF delivery. No spam.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PAID PRODUCT: HOW TO SET UP OPENCLAW -->
+<section class="py-10 relative overflow-hidden" id="openclaw-guide">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="scroll-reveal bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-accent-gold/20 rounded-3xl p-8 md:p-16">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <div class="inline-block bg-accent-gold/20 text-amber-400 rounded-full px-4 py-1.5 text-sm font-semibold mb-6">
+            ⚡ Premium Guide
+          </div>
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-4 leading-tight">
+            How to Set Up<br><span class="gradient-text">OpenClaw</span>
+          </h2>
+          <p class="text-gray-400 mb-6 leading-relaxed">
+            The complete, step-by-step guide to setting up your own AI agent with OpenClaw. Go from zero to a fully configured AI assistant that works for you 24/7.
+          </p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-sm text-gray-300">
+              <span class="text-accent-purple">✓</span> Full installation walkthrough (Mac, Windows, Linux)
+            </li>
+            <li class="flex items-center gap-3 text-sm text-gray-300">
+              <span class="text-accent-purple">✓</span> Connect to Telegram, WhatsApp, Discord, and more
+            </li>
+            <li class="flex items-center gap-3 text-sm text-gray-300">
+              <span class="text-accent-purple">✓</span> Set up automations, cron jobs, and heartbeats
+            </li>
+            <li class="flex items-center gap-3 text-sm text-gray-300">
+              <span class="text-accent-purple">✓</span> Configure your agent's personality and memory
+            </li>
+            <li class="flex items-center gap-3 text-sm text-gray-300">
+              <span class="text-accent-purple">✓</span> Pro tips for getting the most out of your AI agent
+            </li>
+            <li class="flex items-center gap-3 text-sm text-gray-300">
+              <span class="text-accent-purple">✓</span> Troubleshooting guide and FAQ
+            </li>
+          </ul>
+          <div class="flex items-center gap-4">
+            <a href="#" class="inline-block bg-gradient-to-r from-accent-gold to-amber-500 text-navy-900 px-8 py-3.5 rounded-full font-bold transition-all hover:shadow-lg hover:shadow-amber-500/25">
+              Get the Guide · $19
+            </a>
+            <span class="text-gray-500 text-sm">Instant PDF download</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center justify-center">
+          <div class="relative">
+            <div class="w-64 h-80 bg-gradient-to-br from-accent-purple/30 to-pink-500/20 rounded-2xl border border-white/10 flex flex-col items-center justify-center p-8 text-center">
+              <p class="text-4xl mb-4">🤖</p>
+              <p class="font-display text-2xl font-bold mb-2">OpenClaw</p>
+              <p class="text-sm text-gray-400">Setup Guide</p>
+              <div class="mt-4 w-full space-y-2">
+                <div class="h-2 bg-white/10 rounded-full w-full"></div>
+                <div class="h-2 bg-white/10 rounded-full w-3/4"></div>
+                <div class="h-2 bg-white/10 rounded-full w-5/6"></div>
+              </div>
+            </div>
+            <div class="absolute -top-4 -right-4 bg-accent-gold text-navy-900 rounded-full w-16 h-16 flex items-center justify-center font-bold text-lg shadow-lg">$19</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="py-10 relative">
+  <div class="max-w-4xl mx-auto px-6 text-center scroll-reveal">
+    <div class="inline-block bg-white/5 border border-white/10 rounded-full px-4 py-1.5 text-sm text-purple-300 font-medium mb-8">About ThriveBright</div>
+    <h2 class="font-display text-3xl md:text-4xl font-bold mb-6">Life's Too Short for<br>Bad Advice</h2>
+    <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+      We're not financial advisors or tech gurus. We're regular people who figured out how to earn more, spend smarter, and use tools like AI to get ahead. Now we share what works.
+    </p>
+    <p class="text-gray-500">
+      Weekly tips · Actionable guides · Real community
+    </p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="py-10 relative overflow-hidden">
+  <div class="blob-1 float" style="top: -100px; right: -100px;"></div>
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <div class="scroll-reveal bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/[0.08] rounded-3xl p-10 md:p-16 glow">
+      <p class="text-5xl mb-6">🚀</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Start Thriving Today</h2>
+      <p class="text-gray-400 mb-8 max-w-md mx-auto">Get the free AI Side Hustle guide + weekly money tips, productivity hacks, and side hustle ideas.</p>
+      
+      <form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-4" action="https://formsubmit.co/thrivebrightlife@gmail.com" method="POST">
+        <input type="email" name="email" placeholder="Your best email" required class="flex-1 bg-white/5 border border-white/10 rounded-full px-6 py-3.5 text-white placeholder-gray-500 text-base">
+        <button type="submit" class="bg-gradient-to-r from-accent-purple to-purple-500 text-white px-8 py-3.5 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-purple-500/25 whitespace-nowrap">
+          Get Free Guide →
+        </button>
+      </form>
+      <p class="text-xs text-gray-600">Free forever. Unsubscribe anytime. No spam.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/5 py-12">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+      <div>
+        <p class="font-display text-lg font-bold mb-1">Thrive<span class="text-accent-purple">Bright</span></p>
+        <p class="text-gray-500 text-sm">Tips that actually work.</p>
+      </div>
+      <div class="flex gap-6 text-sm text-gray-500">
+        <a href="https://instagram.com/thrive.bright.co" class="hover:text-white transition">Instagram</a>
+        <a href="#" class="hover:text-white transition">YouTube</a>
+        <a href="#" class="hover:text-white transition">Privacy</a>
+        <a href="#" class="hover:text-white transition">Terms</a>
+      </div>
+    </div>
+    <div class="mt-8 pt-6 border-t border-white/5 text-center text-xs text-gray-600">
+      © 2026 ThriveBrightLife.com. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+});
+</script>
+
+</body>
+</html>
