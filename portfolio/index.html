@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Bri Barry — Portfolio | Marketing Consultant & Web Designer</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['"Playfair Display"', 'serif'],
+        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+      },
+      colors: {
+        navy: { 900: '#0f0f23', 800: '#1a1a3e', 700: '#2d1b69' },
+        accent: { purple: '#6366f1', pink: '#ec4899', gold: '#f59e0b' },
+      }
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Plus Jakarta Sans', sans-serif; }
+.gradient-text { background: linear-gradient(135deg, #a78bfa, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2); }
+.grain::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); opacity: 0.4; pointer-events: none; z-index: 0; }
+.testimonial-card { background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(236,72,153,0.05)); }
+</style>
+</head>
+<body class="bg-navy-900 text-white grain">
+
+<!-- NAV -->
+<nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-navy-900/80 border-b border-white/5">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <span class="font-display text-xl font-bold">Bri <span class="text-accent-purple">Barry</span></span>
+    <div class="hidden md:flex items-center gap-8 text-sm text-gray-400">
+      <a href="#about" class="hover:text-white transition">About</a>
+      <a href="#work" class="hover:text-white transition">Work</a>
+      <a href="#testimonials" class="hover:text-white transition">Testimonials</a>
+      <a href="#services" class="hover:text-white transition">Services</a>
+    </div>
+    <a href="https://www.fiverr.com/thrivebrightlife" target="_blank" class="bg-accent-purple hover:bg-purple-500 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:shadow-lg hover:shadow-purple-500/25">Hire Me on Fiverr</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="pt-32 pb-20 px-6 relative overflow-hidden">
+  <div class="absolute w-[600px] h-[600px] bg-gradient-to-r from-accent-purple/10 to-accent-pink/5 rounded-full -top-48 -right-48 blur-3xl"></div>
+  <div class="max-w-4xl mx-auto text-center relative z-10">
+    <p class="text-accent-purple text-sm font-semibold tracking-wider uppercase mb-4">Marketing Consultant & Web Designer</p>
+    <h1 class="font-display text-5xl md:text-6xl font-bold mb-6 leading-tight">
+      Helping Businesses <span class="gradient-text">Grow Online</span> Since 2015
+    </h1>
+    <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-8 leading-relaxed">
+      10+ years of marketing strategy, web design, and content creation. I help small businesses build a professional online presence that actually drives results.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <div class="bg-white/5 border border-white/10 rounded-xl px-6 py-3 text-center">
+        <div class="text-2xl font-bold text-accent-purple">10+</div>
+        <div class="text-xs text-gray-400">Years Experience</div>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-xl px-6 py-3 text-center">
+        <div class="text-2xl font-bold text-accent-pink">50+</div>
+        <div class="text-xs text-gray-400">Projects Delivered</div>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-xl px-6 py-3 text-center">
+        <div class="text-2xl font-bold text-accent-gold">100%</div>
+        <div class="text-xs text-gray-400">Client Satisfaction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 px-6">
+  <div class="max-w-4xl mx-auto">
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12">
+      <h2 class="font-display text-3xl font-bold mb-6">About Me</h2>
+      <div class="text-gray-300 leading-relaxed space-y-4">
+        <p>I'm Bri, a marketing consultant based in the San Francisco Bay Area. Since 2015, I've helped businesses of all sizes build and grow their online presence through strategic marketing, modern web design, and compelling content.</p>
+        <p>My experience spans startups to established brands. I've built national marketing event programs that drove record customer growth, developed content strategies that increased engagement by 200%+, and designed websites that convert visitors into paying customers.</p>
+        <p>I work independently, which means you're always communicating directly with the person doing the work. No hand-offs, no junior team members, just me bringing 10+ years of experience to every project.</p>
+        <p><strong class="text-white">Industries I've worked in:</strong> Home services, SaaS startups, hospitality, e-commerce, health and wellness, real estate, food and beverage, and non-profits.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK SAMPLES -->
+<section id="work" class="py-20 px-6 bg-navy-800/30">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="text-accent-purple text-sm font-semibold tracking-wider uppercase mb-3">Portfolio</p>
+      <h2 class="font-display text-4xl font-bold">Recent Work</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Website: Coastal Catch -->
+      <div class="card-hover bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
+        <div class="h-48 bg-gradient-to-br from-blue-900 to-cyan-700 flex items-center justify-center">
+          <span class="text-5xl">🌊</span>
+        </div>
+        <div class="p-6">
+          <span class="text-xs bg-accent-purple/20 text-accent-purple px-3 py-1 rounded-full">Web Design</span>
+          <h3 class="font-bold text-lg mt-3 mb-2">Coastal Catch Agency</h3>
+          <p class="text-gray-400 text-sm">Full website for a marketing agency. Responsive design, pricing tiers, contact forms, SEO optimization.</p>
+        </div>
+      </div>
+
+      <!-- Website: Hair Salon -->
+      <div class="card-hover bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
+        <div class="h-48 bg-gradient-to-br from-pink-900 to-rose-700 flex items-center justify-center">
+          <span class="text-5xl">💇</span>
+        </div>
+        <div class="p-6">
+          <span class="text-xs bg-accent-pink/20 text-accent-pink px-3 py-1 rounded-full">Web Design</span>
+          <h3 class="font-bold text-lg mt-3 mb-2">Hair Factory Pacifica</h3>
+          <p class="text-gray-400 text-sm">Modern salon website with booking integration, service menu, gallery, and mobile-first design.</p>
+        </div>
+      </div>
+
+      <!-- Website: Auto Repair -->
+      <div class="card-hover bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
+        <div class="h-48 bg-gradient-to-br from-gray-800 to-slate-700 flex items-center justify-center">
+          <span class="text-5xl">🔧</span>
+        </div>
+        <div class="p-6">
+          <span class="text-xs bg-accent-gold/20 text-accent-gold px-3 py-1 rounded-full">Web Design</span>
+          <h3 class="font-bold text-lg mt-3 mb-2">Simon's Auto Repair</h3>
+          <p class="text-gray-400 text-sm">Professional site for local auto shop. Click-to-call, Google Maps integration, service listings.</p>
+        </div>
+      </div>
+
+      <!-- Content Calendar -->
+      <div class="card-hover bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
+        <div class="h-48 bg-gradient-to-br from-purple-900 to-indigo-700 flex items-center justify-center">
+          <span class="text-5xl">📅</span>
+        </div>
+        <div class="p-6">
+          <span class="text-xs bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full">Content Strategy</span>
+          <h3 class="font-bold text-lg mt-3 mb-2">Social Media Content Plan</h3>
+          <p class="text-gray-400 text-sm">Full-month content calendar with post copy, hashtag strategy, carousel designs, and reel scripts for Instagram.</p>
+        </div>
+      </div>
+
+      <!-- Blog Posts -->
+      <div class="card-hover bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
+        <div class="h-48 bg-gradient-to-br from-emerald-900 to-green-700 flex items-center justify-center">
+          <span class="text-5xl">✍️</span>
+        </div>
+        <div class="p-6">
+          <span class="text-xs bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full">Blog Writing</span>
+          <h3 class="font-bold text-lg mt-3 mb-2">SEO Blog Posts</h3>
+          <p class="text-gray-400 text-sm">Long-form, SEO-optimized articles on AI tools, side hustles, and small business growth. 1,500-2,500 words each.</p>
+        </div>
+      </div>
+
+      <!-- Digital Products -->
+      <div class="card-hover bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
+        <div class="h-48 bg-gradient-to-br from-amber-900 to-orange-700 flex items-center justify-center">
+          <span class="text-5xl">📦</span>
+        </div>
+        <div class="p-6">
+          <span class="text-xs bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full">Digital Products</span>
+          <h3 class="font-bold text-lg mt-3 mb-2">Planners and Journals</h3>
+          <p class="text-gray-400 text-sm">Designed and launched 8+ digital products on Etsy, including journals, planners, and habit trackers.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="text-accent-purple text-sm font-semibold tracking-wider uppercase mb-3">Testimonials</p>
+      <h2 class="font-display text-4xl font-bold">What Clients Say</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div class="testimonial-card border border-white/10 rounded-2xl p-8">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-accent-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <p class="text-gray-300 leading-relaxed mb-6 italic">"Cambria is hard working, detail-oriented, and results-driven. She helped launched our marketing events program and oversaw all key components, from managing costs, to staffing, to tracking metrics and progress across all of our markets. She demonstrated initiative and hustle in getting event partnerships and sponsorships set up, and built a scalable, replicable approach to events that we were able to ramp up quickly in all markets."</p>
+        <div>
+          <p class="font-semibold text-white">Ajay Prakash</p>
+          <p class="text-sm text-gray-400">Co-Founder & CEO, Rinse</p>
+        </div>
+      </div>
+
+      <div class="testimonial-card border border-white/10 rounded-2xl p-8">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-accent-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <p class="text-gray-300 leading-relaxed mb-6 italic">"Cambria is a special talent. She had the creative vision and follow through to orchestrate Rinse's national marketing events strategy that played an integral role in both brand awareness and record high new customer growth. I was particularly impressed with Cambria's ability to seamlessly move from individual contributor to mentor and coach. As a team member or leader, Cambria earns my highest recommendation."</p>
+        <div>
+          <p class="font-semibold text-white">Ashkan Mizani</p>
+          <p class="text-sm text-gray-400">Partner, ODDBIRD VC</p>
+        </div>
+      </div>
+
+      <div class="testimonial-card border border-white/10 rounded-2xl p-8">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-accent-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <p class="text-gray-300 leading-relaxed mb-6 italic">"We had no strategy and little activity but Bri quickly helped us establish our voice by developing a number of fun campaigns. With her amazing attitude and energy, she helped us with a number of important projects."</p>
+        <div>
+          <p class="font-semibold text-white">Jason J.</p>
+          <p class="text-sm text-gray-400">CEO, Smart Home Technology</p>
+        </div>
+      </div>
+
+      <div class="testimonial-card border border-white/10 rounded-2xl p-8">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-accent-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <p class="text-gray-300 leading-relaxed mb-6 italic">"Cambria organised a team dragon boat race for a group of 200 as part of a work charity event. We received extremely positive feedback on the event for everyone that participated. It was so thoroughly organised and managed. In total, we managed to raise just over 6,000 for our charity which will make a substantial difference to them. It totally exceeded my expectations!"</p>
+        <div>
+          <p class="font-semibold text-white">Aanya Madhani</p>
+          <p class="text-sm text-gray-400">Account Executive, Microsoft</p>
+        </div>
+      </div>
+
+      <div class="testimonial-card border border-white/10 rounded-2xl p-8">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-accent-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <p class="text-gray-300 leading-relaxed mb-6 italic">"Cambria is a joy to work with! She's professional, dedicated, and delivers meticulous quality in the events she organizes."</p>
+        <div>
+          <p class="font-semibold text-white">Parth Padgaonkar</p>
+          <p class="text-sm text-gray-400">Engineering Leader</p>
+        </div>
+      </div>
+
+      <div class="testimonial-card border border-white/10 rounded-2xl p-8">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-accent-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <p class="text-gray-300 leading-relaxed mb-6 italic">"Cambria had a great attitude and jumped right in to the job with a 'can-do' and positive mindset. She was a huge help to us during her internship with us."</p>
+        <div>
+          <p class="font-semibold text-white">Gretchen Melvin</p>
+          <p class="text-sm text-gray-400">Special Events Senior Manager, Pebble Beach Resorts</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-20 px-6 bg-navy-800/30">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="text-accent-purple text-sm font-semibold tracking-wider uppercase mb-3">What I Offer</p>
+      <h2 class="font-display text-4xl font-bold">Services</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center card-hover">
+        <div class="text-4xl mb-4">🌐</div>
+        <h3 class="font-bold text-lg mb-2">Web Design</h3>
+        <p class="text-gray-400 text-sm">Modern, mobile-friendly websites that convert visitors into customers. SEO included.</p>
+      </div>
+
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center card-hover">
+        <div class="text-4xl mb-4">✍️</div>
+        <h3 class="font-bold text-lg mb-2">Blog Writing</h3>
+        <p class="text-gray-400 text-sm">SEO-optimized articles that drive organic traffic and establish authority.</p>
+      </div>
+
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center card-hover">
+        <div class="text-4xl mb-4">📱</div>
+        <h3 class="font-bold text-lg mb-2">Content Calendars</h3>
+        <p class="text-gray-400 text-sm">Full-month social media plans with captions, hashtags, and visual direction.</p>
+      </div>
+
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center card-hover">
+        <div class="text-4xl mb-4">📦</div>
+        <h3 class="font-bold text-lg mb-2">Digital Products</h3>
+        <p class="text-gray-400 text-sm">Planners, templates, guides, and prompt packs designed to sell.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 px-6">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="font-display text-4xl font-bold mb-6">Ready to Work Together?</h2>
+    <p class="text-xl text-gray-400 mb-8">Let's build something great for your business.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="https://www.fiverr.com/thrivebrightlife" target="_blank" class="bg-accent-purple hover:bg-purple-500 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all hover:shadow-lg hover:shadow-purple-500/25">Hire Me on Fiverr</a>
+      <a href="mailto:thrivebright@yahoo.com" class="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all border border-white/10">Email Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-8 px-6 border-t border-white/5">
+  <div class="max-w-6xl mx-auto text-center text-sm text-gray-500">
+    <p>&copy; 2026 Bri Barry / ThriveBright. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
