@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — ThriveBright | Affordable Websites for Local Businesses</title>
+<meta name="description" content="Frequently asked questions about ThriveBright web design services — pricing, process, revisions, hosting, and more. Get your questions answered before you commit.">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['"Playfair Display"', 'serif'],
+        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+      },
+      colors: {
+        navy: { 900: '#0f0f23', 800: '#1a1a3e', 700: '#2d1b69' },
+        accent: { purple: '#6366f1', pink: '#ec4899', gold: '#f59e0b' },
+      }
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Plus Jakarta Sans', sans-serif; }
+.gradient-text { background: linear-gradient(135deg, #a78bfa, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.glow { box-shadow: 0 0 60px rgba(99, 102, 241, 0.3); }
+.grain::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); opacity: 0.4; pointer-events: none; z-index: 0; }
+.blob-1 { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%); border-radius: 50%; top: -200px; right: -200px; pointer-events: none; }
+.blob-2 { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(236,72,153,0.08) 0%, transparent 70%); border-radius: 50%; bottom: -100px; left: -100px; pointer-events: none; }
+.scroll-reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
+.scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+.faq-item { border-bottom: 1px solid rgba(255,255,255,0.06); }
+.faq-item:last-child { border-bottom: none; }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+.faq-answer.open { max-height: 300px; }
+.faq-icon { transition: transform 0.3s ease; }
+.faq-icon.open { transform: rotate(45deg); }
+</style>
+</head>
+<body class="bg-navy-900 text-white grain">
+
+<!-- NAV -->
+<nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-navy-900/80 border-b border-white/5">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="/" class="font-display text-xl font-bold">Thrive<span class="text-accent-purple">Bright</span></a>
+    <div class="hidden md:flex items-center gap-8 text-sm text-gray-400">
+      <a href="/#services" class="hover:text-white transition">Services</a>
+      <a href="/#pricing" class="hover:text-white transition">Pricing</a>
+      <a href="/#portfolio" class="hover:text-white transition">Portfolio</a>
+      <a href="/#contact" class="hover:text-white transition">Contact</a>
+    </div>
+    <a href="/#mockup" class="bg-accent-purple hover:bg-purple-500 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:shadow-lg hover:shadow-purple-500/25">Get Free Mockup</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative pt-32 pb-16 overflow-hidden">
+  <div class="blob-1"></div>
+  <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+    <div class="inline-block bg-white/5 border border-white/10 rounded-full px-4 py-1.5 text-sm text-purple-300 font-medium mb-6">
+      ❓ Got Questions? We've Got Answers.
+    </div>
+    <h1 class="font-display text-5xl md:text-6xl font-bold leading-[1.1] mb-6">
+      Frequently Asked<br><span class="gradient-text">Questions</span>
+    </h1>
+    <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+      Everything you need to know about getting your business website built with ThriveBright. Don't see your question? <a href="mailto:hello@thrivebrightlife.com" class="text-accent-purple hover:text-purple-300 transition">Email us</a>.
+    </p>
+  </div>
+</section>
+
+<!-- FAQ CONTENT -->
+<section class="relative pb-24 overflow-hidden">
+  <div class="blob-2"></div>
+  <div class="max-w-3xl mx-auto px-6 relative z-10">
+
+    <!-- PRICING SECTION -->
+    <div class="scroll-reveal mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 bg-accent-purple/20 border border-accent-purple/30 rounded-xl flex items-center justify-center text-lg">💰</div>
+        <h2 class="font-display text-2xl font-bold">Pricing</h2>
+      </div>
+
+      <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden">
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-start gap-4 hover:bg-white/[0.02] transition">
+            <span class="font-semibold text-white">How much does a website cost?</span>
+            <span class="faq-icon text-accent-purple text-2xl font-light flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-answer px-8">
+            <div class="pb-6 text-gray-400 leading-relaxed space-y-3">
+              <p>We offer three flat-rate packages — all one-time fees with no hidden costs:</p>
+              <ul class="space-y-2 mt-3">
+                <li class="flex items-start gap-3">
+                  <span class="text-accent-purple font-bold mt-0.5 flex-shrink-0">✓</span>
+                  <span><strong class="text-white">Starter — $349</strong> (normally $497): 1–3 page website. Perfect for businesses that need a clean, professional online presence fast.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-accent-purple font-bold mt-0.5 flex-shrink-0">✓</span>
+                  <span><strong class="text-white">Standard — $549</strong> (normally $797): Up to 5 pages. Great for businesses with multiple services or a portfolio to showcase.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-accent-purple font-bold mt-0.5 flex-shrink-0">✓</span>
+                  <span><strong class="text-white">Premium — $849</strong> (normally $1,297): Unlimited pages. Full-featured website with everything included.</span>
+                </li>
+              </ul>
+              <p class="text-green-400 text-sm mt-4">🔥 These are launch prices for our first 10 clients only — they won't last long.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-start gap-4 hover:bg-white/[0.02] transition">
+            <span class="font-semibold text-white">Is the price one-time or recurring?</span>
+            <span class="faq-icon text-accent-purple text-2xl font-light flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-answer px-8">
+            <div class="pb-6 text-gray-400 leading-relaxed">
+              <p>The website build price is a <strong class="text-white">one-time fee</strong> — you pay once, and the site is yours forever. No monthly subscriptions for the design or development work.</p>
+              <p class="mt-3">After launch, there are two optional add-ons you can choose from:</p>
+              <ul class="space-y-2 mt-3">
+                <li class="flex items-start gap-3"><span class="text-cyan-400 mt-0.5">→</span> <span><strong class="text-white">$19/mo</strong> — Domain + Hosting (keeps your site online)</span></li>
+                <li class="flex items-start gap-3"><span class="text-amber-400 mt-0.5">→</span> <span><strong class="text-white">$79/mo</strong> — Full Maintenance (hosting + ongoing updates + SEO monitoring)</span></li>
+              </ul>
+              <p class="mt-3">Both are optional and cancel anytime. You're never locked in.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-start gap-4 hover:bg-white/[0.02] transition">
+            <span class="font-semibold text-white">What does the $19/mo hosting plan include?</span>
+            <span class="faq-icon text-accent-purple text-2xl font-light flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-answer px-8">
+            <div class="pb-6 text-gray-400 leading-relaxed">
+              <p>The $19/mo plan covers everything your site needs to stay live and secure:</p>
+              <ul class="space-y-2 mt-3">
+                <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Domain name registration (your .com address)</li>
+                <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Web hosting (fast, reliable servers)</li>
+                <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> SSL certificate (the padlock that makes your site secure)</li>
+                <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Regular backups so your site is always safe</li>
+              </ul>
+              <p class="mt-3">Cancel anytime — no contracts, no cancellation fees.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-start gap-4 hover:bg-white/[0.02] transition">
+            <span class="font-semibold text-white">What if I already have a domain name?</span>
+            <span class="faq-icon text-accent-purple text-2xl font-light flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-answer px-8">
+            <div class="pb-6 text-gray-400 leading-relaxed">
+              <p>No problem at all — we can use your existing domain. You don't need to buy a new one. Just let us know during the onboarding process and we'll connect everything up for you.</p>
+              <p class="mt-3">If you choose our $19/mo hosting plan but already have a domain, we'll adjust accordingly.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-start gap-4 hover:bg-white/[0.02] transition">
+            <span class="font-semibold text-white">Are there any hidden fees?</span>
+            <span class="faq-icon text-accent-purple text-2xl font-light flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-answer px-8">
+            <div class="pb-6 text-gray-400 leading-relaxed">
+              <p><strong class="text-green-400">Nope. Zero hidden fees.</strong> The one-time price you see includes everything to design, build, and launch your site. No setup fees, no surprise charges, no "premium" features unlocked later.</p>
+              <p class="mt-3">The only additional costs are the <em>optional</em> monthly plans for hosting and maintenance — and those are clearly priced upfront.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PROCESS SECTION -->
+    <div class="scroll-reveal mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 bg-pink-500/20 border border-pink-500/30 rounded-xl flex items-center justify-center text-lg">⚙️</div>
+        <h2 class="font-display text-2xl font-bold">The Process</h2>
+      </div>
+
+      <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden">
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-start gap-4 hover:bg-white/[0.02] transition">
+            <span class="font-semibold text-white">How does the free mockup work?</span>
+            <span class="faq-icon text-accent-purple text-2xl font-light flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-answer px-8">
+            <div class="pb-6 text-gray-400 leading-relaxed">
+              <p>Simple. You fill out the form on our homepage with basic info about your business — name, type, services, and style preferences. From there:</p>
+              <ol class="space-y-2 mt-3 list-none">
+                <li class="flex items-start gap-3"><span class="text-accent-purple font-bold">1.</span> We design a <strong class="text-white">custom website mockup</strong> tailored to your brand</li>
+                <li class="flex items-start gap-3"><span class="text-accent-purple font-bold">2.</span> We send it to you within <strong class="text-white">48 hours</strong> — you see it before paying anything</li>
+                <li class="flex items-start gap-3"><span class="text-accent-purple font-bold">3.</span> If you love it, we finalize and launch. If not, you owe nothing.</li>
+              </ol>
+              <p class="mt-3">It's truly free — no credit card, no obligation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-start gap-4 hover:bg-white/[0.02] transition">
+            <span class="font-semibold text-white">How long does it take?</span>
+            <span class="faq-icon text-accent-purple text-2xl font-light flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-answer px-8">
+            <div class="pb-6 text-gray-400 leading-relaxed">
+              <p>We move fast:</p>
+              <ul class="space-y-2 mt-3">
+                <li class="flex items-start gap-3"><span class="text-green-400">→</span> <span><strong class="text-white">48 hours</strong> to deliver your custom mockup after you submit the form</span></li>
+                <li class="flex items-start gap-3"><span class="text-green-400">→</span> <span><strong class="text-white">48 hours</strong> to go fully live after you approve the mockup and pay</span></li>
+              </ul>
+              <p class="mt-3">So from form submission to a live website, you're looking at roughly 4 days — assuming you approve promptly. Most traditional agencies take 4–8 <em>weeks</em>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-start gap-4 hover:bg-white/[0.02] transition">
+            <span class="font-semibold text-white">How many revisions do I get?</span>
+            <span class="faq-icon text-accent-purple text-2xl font-light flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-answer px-8">
+            <div class="pb-6 text-gray-400 leading-relaxed">
+              <p>Revision rounds included with each plan:</p>
+              <ul class="space-y-2 mt-3">
+                <li class="flex items-center gap-3"><span class="text-white font-semibold w-24">Starter</span> <span>1 round of revisions</span></li>
+                <li class="flex items-center gap-3"><span class="text-accent-purple font-semibold w-24">Standard</span> <span>1 round of revisions</span></li>
+                <li class="flex items-center gap-3"><span class="text-pink-400 font-semibold w-24">Premium</span> <span>3 rounds of revisions</span></li>
+              </ul>
+              <p class="mt-3">A "round" means you give us a list of changes, we make them all at once. Additional revision rounds can be added for a small fee.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-start gap-4 hover:bg-white/[0.02] transition">
+            <span class="font-semibold text-white">What if I don't like the mockup?</span>
+            <span class="faq-icon text-accent-purple text-2xl font-light flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-answer px-8">
+            <div class="pb-6 text-gray-400 leading-relaxed">
+              <p><strong class="text-white">No charge. No awkward conversation. No obligation whatsoever.</strong></p>
+              <p class="mt-3">The mockup is free. If it's not right for you, just let us know — or don't. You don't owe us anything. We take the risk so you don't have to.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TECHNICAL SECTION -->
+    <div class="scroll-reveal mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 bg-cyan-500/20 border border-cyan-500/30 rounded-xl flex items-center justify-center text-lg">🔧</div>
+        <h2 class="font-display text-2xl font-bold">Technical</h2>
+      </div>
+
+      <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden">
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-start gap-4 hover:bg-white/[0.02] transition">
+            <span class="font-semibold text-white">Who owns the website?</span>
+            <span class="faq-icon text-accent-purple text-2xl font-light flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-answer px-8">
+            <div class="pb-6 text-gray-400 leading-relaxed">
+              <p><strong class="text-white">You do. Completely.</strong></p>
+              <p class="mt-3">Once you pay for the build, the website is yours. The code, the design, the content — all of it. You're not renting anything from us. We can't take it away.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-start gap-4 hover:bg-white/[0.02] transition">
+            <span class="font-semibold text-white">What happens if I cancel hosting?</span>
+            <span class="faq-icon text-accent-purple text-2xl font-light flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-answer px-8">
+            <div class="pb-6 text-gray-400 leading-relaxed">
+              <p>Your site stays live — we just transfer everything over to you. We'll hand off the files and help you move to a host of your choice (options like Netlify have free tiers).</p>
+              <p class="mt-3">Your domain transfers to you too. You won't lose anything you paid for.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-start gap-4 hover:bg-white/[0.02] transition">
+            <span class="font-semibold text-white">Will my website show up on Google?</span>
+            <span class="faq-icon text-accent-purple text-2xl font-light flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-answer px-8">
+            <div class="pb-6 text-gray-400 leading-relaxed">
+              <p>Yes — we include <strong class="text-white">basic SEO setup on every plan</strong>. That means proper page titles, meta descriptions, header structure, fast load times, and Google indexing submission.</p>
+              <p class="mt-3">The Standard plan adds full on-page SEO. The Premium plan includes advanced schema markup. For ongoing SEO improvement over time, the $79/mo maintenance plan includes monthly monitoring.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-start gap-4 hover:bg-white/[0.02] transition">
+            <span class="font-semibold text-white">Is it mobile-friendly?</span>
+            <span class="faq-icon text-accent-purple text-2xl font-light flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-answer px-8">
+            <div class="pb-6 text-gray-400 leading-relaxed">
+              <p><strong class="text-white">Yes — 100%, always.</strong> Every site we build is fully responsive and tested on phones, tablets, and desktops before delivery.</p>
+              <p class="mt-3">This isn't optional for us — over 60% of web traffic comes from mobile devices, and Google ranks mobile-friendly sites higher. It's non-negotiable.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- GETTING STARTED SECTION -->
+    <div class="scroll-reveal mb-16">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 bg-amber-500/20 border border-amber-500/30 rounded-xl flex items-center justify-center text-lg">🚀</div>
+        <h2 class="font-display text-2xl font-bold">Getting Started</h2>
+      </div>
+
+      <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden">
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-start gap-4 hover:bg-white/[0.02] transition">
+            <span class="font-semibold text-white">How do I get started?</span>
+            <span class="faq-icon text-accent-purple text-2xl font-light flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-answer px-8">
+            <div class="pb-6 text-gray-400 leading-relaxed">
+              <p>Head to <a href="/#mockup" class="text-accent-purple hover:text-purple-300 transition">thrivebrightlife.com</a> and fill out the free mockup form. It takes about 2 minutes. No payment, no commitment — just some basic info about your business.</p>
+              <p class="mt-3">We'll reach out within 24 hours to confirm details, then deliver your mockup within 48 hours.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-start gap-4 hover:bg-white/[0.02] transition">
+            <span class="font-semibold text-white">What information do you need from me?</span>
+            <span class="faq-icon text-accent-purple text-2xl font-light flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-answer px-8">
+            <div class="pb-6 text-gray-400 leading-relaxed">
+              <p>The basics to get started:</p>
+              <ul class="space-y-2 mt-3">
+                <li class="flex items-center gap-2"><span class="text-accent-purple">✓</span> Your business name</li>
+                <li class="flex items-center gap-2"><span class="text-accent-purple">✓</span> Type of business (salon, plumber, restaurant, etc.)</li>
+                <li class="flex items-center gap-2"><span class="text-accent-purple">✓</span> Services you offer</li>
+                <li class="flex items-center gap-2"><span class="text-accent-purple">✓</span> Color/style preferences (light, dark, modern, classic...)</li>
+                <li class="flex items-center gap-2"><span class="text-accent-purple">✓</span> Any content you already have (logo, photos, text)</li>
+              </ul>
+              <p class="mt-3">Don't have everything? That's okay — we can work with what you have and fill in the gaps.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-start gap-4 hover:bg-white/[0.02] transition">
+            <span class="font-semibold text-white">How do I contact you directly?</span>
+            <span class="faq-icon text-accent-purple text-2xl font-light flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-answer px-8">
+            <div class="pb-6 text-gray-400 leading-relaxed">
+              <p>Email us anytime at <a href="mailto:hello@thrivebrightlife.com" class="text-accent-purple hover:text-purple-300 transition font-semibold">hello@thrivebrightlife.com</a> — we respond within 24 hours, usually faster.</p>
+              <p class="mt-3">No chatbots. No support tickets. Just a real person who actually cares about your business.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- STILL HAVE QUESTIONS CTA -->
+    <div class="scroll-reveal bg-gradient-to-br from-white/[0.06] to-white/[0.02] border border-white/[0.10] rounded-3xl p-10 text-center glow">
+      <h2 class="font-display text-3xl font-bold mb-4">Still Have Questions?</h2>
+      <p class="text-gray-400 mb-8 max-w-md mx-auto">We're happy to chat before you commit to anything. Reach out directly or get your free mockup — it's the easiest way to see what we can do for you.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/#mockup" class="bg-gradient-to-r from-accent-purple to-purple-500 hover:from-purple-500 hover:to-accent-purple text-white px-8 py-4 rounded-full font-semibold text-base transition-all hover:shadow-lg hover:shadow-purple-500/25">
+          Get a Free Mockup →
+        </a>
+        <a href="mailto:hello@thrivebrightlife.com" class="bg-white/5 border border-white/10 hover:bg-white/10 text-white px-8 py-4 rounded-full font-semibold text-base transition-all">
+          📧 Email Us
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/5 py-12">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+      <div>
+        <p class="font-display text-lg font-bold mb-2">Thrive<span class="text-accent-purple">Bright</span></p>
+        <p class="text-gray-500 text-sm max-w-xs">Modern, affordable websites for local businesses — delivered in 48 hours.</p>
+        <p class="text-gray-600 text-sm mt-3">
+          <a href="mailto:hello@thrivebrightlife.com" class="hover:text-gray-400 transition">hello@thrivebrightlife.com</a>
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-10 text-sm text-gray-500">
+        <div>
+          <p class="text-white font-semibold mb-3">Services</p>
+          <div class="space-y-2">
+            <p><a href="/#services" class="hover:text-white transition">Website Design</a></p>
+            <p><a href="/#services" class="hover:text-white transition">Local SEO</a></p>
+            <p><a href="/#services" class="hover:text-white transition">Google Business</a></p>
+          </div>
+        </div>
+        <div>
+          <p class="text-white font-semibold mb-3">Company</p>
+          <div class="space-y-2">
+            <p><a href="/#portfolio" class="hover:text-white transition">Portfolio</a></p>
+            <p><a href="/#pricing" class="hover:text-white transition">Pricing</a></p>
+            <p><a href="/#mockup" class="hover:text-white transition">Free Mockup</a></p>
+          </div>
+        </div>
+        <div>
+          <p class="text-white font-semibold mb-3">Legal</p>
+          <div class="space-y-2">
+            <p><a href="#" class="hover:text-white transition">Privacy Policy</a></p>
+            <p><a href="/faq.html" class="hover:text-white transition">FAQ</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-10 pt-6 border-t border-white/5 text-center text-xs text-gray-600">
+      © 2026 ThriveBright · thrivebrightlife.com · All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const icon = btn.querySelector('.faq-icon');
+  const isOpen = answer.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-answer.open').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-icon.open').forEach(i => i.classList.remove('open'));
+  // Open this one if it was closed
+  if (!isOpen) {
+    answer.classList.add('open');
+    icon.classList.add('open');
+  }
+}
+</script>
+
+</body>
+</html>
