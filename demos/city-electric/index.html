@@ -1,133 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>City Electric | Corsicana, TX</title>
-<meta name="description" content="Trusted electrician in Corsicana, TX. Call (469) 224-1991 for fast, reliable service.">
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<script>
-tailwind.config = {
-  theme: { extend: {
-    fontFamily: { sans: ['Inter', 'sans-serif'] },
-    colors: { brand: { 50: '#fef3c7', 500: '#f59e0b', 600: '#d97706', 800: '#4a3420', 900: '#271a0a' } }
-  }}
-}
-</script>
-<style>body { font-family: 'Inter', sans-serif; }</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>City Electric | Licensed Electricians — Corsicana, TX</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            yellow: { DEFAULT: '#FFD600', 400: '#FFD600', 500: '#F5C800' },
+          },
+          fontFamily: {
+            oswald: ['Oswald', 'sans-serif'],
+            roboto: ['Roboto', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Roboto', sans-serif; background: #000; color: #fff; }
+    h1, h2, h3, h4, .font-oswald { font-family: 'Oswald', sans-serif; }
+    .hero-bg {
+      background-image: linear-gradient(to right, rgba(0,0,0,0.88) 45%, rgba(0,0,0,0.45) 100%),
+        url('https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1200');
+      background-size: cover;
+      background-position: center;
+    }
+    .yellow-btn {
+      background: #FFD600;
+      color: #000;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .yellow-btn:hover { background: #F5C800; transform: translateY(-1px); }
+    .yellow-btn:active { transform: translateY(0); }
+    .service-card { border-left: 3px solid #FFD600; }
+    .stat-bar { background: #FFD600; color: #000; }
+    .review-card { border-top: 3px solid #FFD600; }
+    /* Diagonal accent */
+    .diagonal-cut {
+      clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+    }
+    .sticky-call {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .sticky-call {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: #FFD600;
+        color: #000;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        font-size: 1.15rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        align-items: center;
+        justify-content: center;
+        padding: 14px;
+        box-shadow: 0 -4px 20px rgba(255,214,0,0.35);
+        text-decoration: none;
+      }
+    }
+    .nav-bar {
+      background: rgba(0,0,0,0.95);
+      border-bottom: 2px solid #FFD600;
+    }
+    .section-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #FFD600;
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-black text-white">
 
-<div class="bg-brand-900 text-white text-sm py-2">
-  <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-    <p>⚡ Serving Corsicana, TX & Surrounding Areas</p>
-    <a href="tel:4692241991" class="font-bold hover:opacity-80 transition">📞 (469) 224-1991</a>
-  </div>
-</div>
+  <!-- NAV -->
+  <nav class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <span class="inline-block w-2 h-8 bg-[#FFD600] mr-1"></span>
+      <span class="font-oswald text-xl font-bold tracking-widest uppercase text-white">City Electric</span>
+      <span class="hidden sm:inline font-roboto text-xs text-gray-400 ml-2 tracking-wider">Corsicana, TX</span>
+    </div>
+    <a href="tel:9036543200" class="yellow-btn px-5 py-2 text-sm rounded-none tracking-widest">
+      ☎ (903) 654-3200
+    </a>
+  </nav>
 
-<nav class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
-  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-    <div>
-      <h1 class="text-2xl font-black" style="color:#4a3420">City Electric</h1>
-      <p class="text-xs text-gray-500 -mt-1">Electrical Services</p>
-    </div>
-    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
-      <a href="#services" class="hover:opacity-70 transition">Services</a>
-      <a href="#about" class="hover:opacity-70 transition">About</a>
-      <a href="#reviews" class="hover:opacity-70 transition">Reviews</a>
-      <a href="tel:4692241991" class="text-white px-6 py-2.5 rounded-full font-semibold transition" style="background:#f59e0b">Call Now</a>
-    </div>
-    <a href="tel:4692241991" class="md:hidden text-white px-5 py-2.5 rounded-full text-sm font-semibold" style="background:#f59e0b">Call Now</a>
-  </div>
-</nav>
-
-<section class="text-white py-20 md:py-28" style="background:linear-gradient(135deg,#4a3420,#271a0a)">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <div class="inline-block text-sm font-semibold px-4 py-1.5 rounded-full mb-6" style="background:rgba(245,158,11,0.2);color:#fcd34d">⭐ Trusted in Corsicana</div>
-    <h2 class="text-4xl md:text-6xl font-black leading-tight mb-6">Corsicana's Trusted<br>Electrical Services</h2>
-    <p class="text-xl max-w-2xl mx-auto mb-10 opacity-80">Professional, reliable service you can count on. Call today for a free estimate.</p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="tel:4692241991" class="bg-yellow-400 text-gray-900 px-8 py-4 rounded-full text-lg font-bold hover:bg-yellow-300 transition shadow-lg shadow-yellow-400/30">📞 Call (469) 224-1991</a>
-      <a href="#services" class="border-2 border-white/30 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/10 transition">View Services →</a>
-    </div>
-  </div>
-</section>
-
-<section id="services" class="py-20 bg-gray-50">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="text-center mb-14">
-      <h3 class="text-3xl md:text-4xl font-bold mb-3">Our Services</h3>
-      <p class="text-gray-500 text-lg">Professional solutions for your home and business</p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-6">
-      
-      <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition border border-gray-100"><div class="text-4xl mb-4">⚡</div><h4 class="text-xl font-bold mb-2">Electrical Repairs</h4><p class="text-gray-500">Outlets, switches, circuit breakers, wiring repairs. Fast and reliable fixes for any electrical issue.</p></div>
-      <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition border border-gray-100"><div class="text-4xl mb-4">💡</div><h4 class="text-xl font-bold mb-2">Lighting Installation</h4><p class="text-gray-500">Indoor and outdoor lighting, recessed lights, ceiling fans, landscape lighting. Brighten up your space.</p></div>
-      <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition border border-gray-100"><div class="text-4xl mb-4">🏠</div><h4 class="text-xl font-bold mb-2">Panel Upgrades</h4><p class="text-gray-500">Electrical panel upgrades and replacements. Keep your home safe and up to code.</p></div>
-      <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition border border-gray-100"><div class="text-4xl mb-4">🔌</div><h4 class="text-xl font-bold mb-2">New Construction Wiring</h4><p class="text-gray-500">Complete electrical wiring for new builds, additions, and remodels. Done right the first time.</p></div>
-      <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition border border-gray-100"><div class="text-4xl mb-4">🛡️</div><h4 class="text-xl font-bold mb-2">Safety Inspections</h4><p class="text-gray-500">Comprehensive electrical safety inspections. Identify hazards before they become problems.</p></div>
-      <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition border border-gray-100"><div class="text-4xl mb-4">⚙️</div><h4 class="text-xl font-bold mb-2">Generator Installation</h4><p class="text-gray-500">Whole-home and portable generator installation. Never lose power again.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="about" class="py-20">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h3 class="text-3xl md:text-4xl font-bold mb-6">Why Choose<br>City Electric?</h3>
-        <div class="space-y-5">
-          <div class="flex gap-4"><div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0" style="background:#fef3c7">✅</div><div><h4 class="font-bold mb-1">Licensed & Insured</h4><p class="text-gray-500">Fully licensed professionals you can trust.</p></div></div>
-          <div class="flex gap-4"><div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0" style="background:#fef3c7">⚡</div><div><h4 class="font-bold mb-1">Fast Response</h4><p class="text-gray-500">Quick arrival and efficient service when you need it most.</p></div></div>
-          <div class="flex gap-4"><div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0" style="background:#fef3c7">💰</div><div><h4 class="font-bold mb-1">Upfront Pricing</h4><p class="text-gray-500">No hidden fees. Know the cost before we start.</p></div></div>
-          <div class="flex gap-4"><div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0" style="background:#fef3c7">🏆</div><div><h4 class="font-bold mb-1">Satisfaction Guaranteed</h4><p class="text-gray-500">We stand behind our work. If you're not happy, we make it right.</p></div></div>
+  <!-- HERO -->
+  <section class="hero-bg diagonal-cut min-h-screen flex items-center pt-16">
+    <div class="max-w-5xl mx-auto px-6 py-24">
+      <p class="section-label mb-3">Corsicana &amp; East Texas</p>
+      <h1 class="font-oswald text-5xl sm:text-7xl font-bold leading-none uppercase mb-4 max-w-2xl">
+        Licensed<br/>
+        <span class="text-[#FFD600]">Electricians</span><br/>
+        Serving Corsicana
+      </h1>
+      <p class="font-roboto text-gray-300 text-lg max-w-lg mb-8 leading-snug">
+        Residential. Commercial. Industrial. From panel upgrades to whole-home rewiring — done right, done safe, done fast.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="tel:9036543200" class="yellow-btn px-8 py-4 text-lg inline-block text-center">
+          ⚡ Call Now: (903) 654-3200
+        </a>
+        <a href="#services" class="inline-block border-2 border-white text-white font-oswald font-bold uppercase tracking-widest px-8 py-4 text-center hover:border-[#FFD600] hover:text-[#FFD600] transition-colors text-lg">
+          Our Services
+        </a>
+      </div>
+      <div class="flex gap-8 mt-10">
+        <div>
+          <span class="font-oswald text-3xl font-bold text-[#FFD600]">15+</span>
+          <span class="block font-roboto text-xs text-gray-400 uppercase tracking-widest">Years Experience</span>
+        </div>
+        <div>
+          <span class="font-oswald text-3xl font-bold text-[#FFD600]">500+</span>
+          <span class="block font-roboto text-xs text-gray-400 uppercase tracking-widest">Jobs Completed</span>
+        </div>
+        <div>
+          <span class="font-oswald text-3xl font-bold text-[#FFD600]">24/7</span>
+          <span class="block font-roboto text-xs text-gray-400 uppercase tracking-widest">Emergency Service</span>
         </div>
       </div>
-      <div class="rounded-3xl p-10 text-white text-center" style="background:linear-gradient(135deg,#4a3420,#271a0a)">
-        <div class="text-5xl mb-4">⚡</div>
-        <h4 class="text-2xl font-bold mb-2">Need Help?</h4>
-        <p class="mb-6 opacity-80">Call now for fast, reliable service in Corsicana and surrounding areas.</p>
-        <a href="tel:4692241991" class="inline-block bg-yellow-400 text-gray-900 px-8 py-4 rounded-full text-lg font-bold hover:bg-yellow-300 transition shadow-lg">📞 (469) 224-1991</a>
-        <p class="text-sm mt-4 opacity-60">206 S Beaton St, Corsicana, TX</p>
+    </div>
+  </section>
+
+  <!-- SERVICES STRIP -->
+  <section id="services" class="bg-black border-b border-[#FFD600]/20 py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="section-label mb-6 text-center">What We Do</p>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-0 border border-[#FFD600]/20">
+        <!-- Service 1 -->
+        <div class="service-card bg-[#0A0A0A] p-6 border-b border-r border-[#FFD600]/10 hover:bg-[#111] transition-colors">
+          <div class="text-[#FFD600] text-3xl mb-3">⚡</div>
+          <h3 class="font-oswald text-xl font-bold uppercase mb-2">Panel Upgrades</h3>
+          <p class="font-roboto text-gray-400 text-sm leading-snug">200A upgrades, breaker replacements, load balancing. Code-compliant installs every time.</p>
+        </div>
+        <!-- Service 2 -->
+        <div class="service-card bg-[#0A0A0A] p-6 border-b border-r border-[#FFD600]/10 hover:bg-[#111] transition-colors">
+          <div class="text-[#FFD600] text-3xl mb-3">🏠</div>
+          <h3 class="font-oswald text-xl font-bold uppercase mb-2">Residential Wiring</h3>
+          <p class="font-roboto text-gray-400 text-sm leading-snug">New construction, renovations, outlet additions, ceiling fans, EV charger installs.</p>
+        </div>
+        <!-- Service 3 -->
+        <div class="service-card bg-[#0A0A0A] p-6 border-b border-r border-[#FFD600]/10 hover:bg-[#111] transition-colors">
+          <div class="text-[#FFD600] text-3xl mb-3">🏭</div>
+          <h3 class="font-oswald text-xl font-bold uppercase mb-2">Commercial Work</h3>
+          <p class="font-roboto text-gray-400 text-sm leading-snug">Retail, office, and light industrial. Lighting, data, power distribution, and safety.</p>
+        </div>
+        <!-- Service 4 -->
+        <div class="service-card bg-[#0A0A0A] p-6 border-b border-[#FFD600]/10 hover:bg-[#111] transition-colors">
+          <div class="text-[#FFD600] text-3xl mb-3">🚨</div>
+          <h3 class="font-oswald text-xl font-bold uppercase mb-2">24/7 Emergency</h3>
+          <p class="font-roboto text-gray-400 text-sm leading-snug">Burning smell? Tripped breaker? No power? We answer day and night — including weekends.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="reviews" class="py-20 bg-gray-50">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h3 class="text-3xl md:text-4xl font-bold mb-3">What Our Customers Say</h3>
-    <p class="text-gray-500 text-lg mb-12">Real reviews from real customers</p>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white rounded-2xl p-8 text-left shadow-sm border border-gray-100"><div class="text-yellow-400 text-lg mb-3">⭐⭐⭐⭐⭐</div><p class="text-gray-600 mb-4 italic">"Great service! They showed up on time, were professional, and the price was fair. Highly recommend."</p><p class="font-semibold text-sm">— Local Customer</p></div>
-      <div class="bg-white rounded-2xl p-8 text-left shadow-sm border border-gray-100"><div class="text-yellow-400 text-lg mb-3">⭐⭐⭐⭐⭐</div><p class="text-gray-600 mb-4 italic">"Professional, honest, and did quality work. Rare to find that these days. Will use again."</p><p class="font-semibold text-sm">— Local Customer</p></div>
-      <div class="bg-white rounded-2xl p-8 text-left shadow-sm border border-gray-100"><div class="text-yellow-400 text-lg mb-3">⭐⭐⭐⭐⭐</div><p class="text-gray-600 mb-4 italic">"Best experience we've had. Fair pricing, great communication, and quality workmanship."</p><p class="font-semibold text-sm">— Local Customer</p></div>
+  <!-- WHY CITY ELECTRIC — STATS BAR -->
+  <section class="stat-bar py-10">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="font-oswald text-xs uppercase tracking-[0.3em] text-black/60 mb-6 text-center">Why Go With City Electric</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="text-center border-r border-black/10 last:border-0">
+          <span class="font-oswald text-5xl font-bold text-black leading-none">15+</span>
+          <span class="block font-roboto text-sm font-bold text-black/70 uppercase tracking-wider mt-1">Years in Business</span>
+        </div>
+        <div class="text-center border-r border-black/10 last:border-0">
+          <span class="font-oswald text-5xl font-bold text-black leading-none">500+</span>
+          <span class="block font-roboto text-sm font-bold text-black/70 uppercase tracking-wider mt-1">Jobs Completed</span>
+        </div>
+        <div class="text-center border-r border-black/10 last:border-0">
+          <span class="font-oswald text-5xl font-bold text-black leading-none">100%</span>
+          <span class="block font-roboto text-sm font-bold text-black/70 uppercase tracking-wider mt-1">Licensed &amp; Insured</span>
+        </div>
+        <div class="text-center">
+          <span class="font-oswald text-5xl font-bold text-black leading-none">24/7</span>
+          <span class="block font-roboto text-sm font-bold text-black/70 uppercase tracking-wider mt-1">Emergency Response</span>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="py-16">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h3 class="text-2xl font-bold mb-4">Serving Corsicana & Surrounding Areas</h3>
-    <a href="tel:4692241991" class="inline-block text-white px-8 py-3.5 rounded-full font-semibold transition" style="background:#f59e0b">📞 Call for a Free Estimate</a>
-  </div>
-</section>
-
-<footer class="py-12 text-white" style="background:#271a0a">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="grid md:grid-cols-3 gap-8">
-      <div><h4 class="text-xl font-bold mb-3">City Electric</h4><p class="text-sm opacity-70">Professional service in Corsicana, TX and surrounding communities.</p></div>
-      <div><h4 class="font-bold mb-3">Contact</h4><p class="text-sm opacity-70">📞 <a href="tel:4692241991" class="hover:opacity-100">(469) 224-1991</a></p><p class="text-sm opacity-70">📍 206 S Beaton St, Corsicana, TX</p></div>
-      <div><h4 class="font-bold mb-3">Hours</h4><p class="text-sm opacity-70">Monday - Friday: 8am - 6pm<br>Saturday: 9am - 4pm<br>Emergency service available</p></div>
+  <!-- ABOUT STRIP -->
+  <section class="bg-[#0A0A0A] border-y border-[#FFD600]/10 py-12">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-start gap-10">
+      <div class="md:w-1/2">
+        <p class="section-label mb-3">About Us</p>
+        <h2 class="font-oswald text-4xl font-bold uppercase leading-tight mb-4">
+          Corsicana's <span class="text-[#FFD600]">Most Trusted</span><br/>Electrical Crew
+        </h2>
+        <p class="font-roboto text-gray-400 text-sm leading-relaxed mb-4">
+          City Electric has been wiring homes and businesses across Corsicana and Navarro County for over 15 years. We're local — we live here, we work here, and our reputation is everything.
+        </p>
+        <p class="font-roboto text-gray-400 text-sm leading-relaxed">
+          Every job is done to code. Every crew member is licensed. No subcontractors, no surprises — just clean, professional electrical work from people who stand behind it.
+        </p>
+      </div>
+      <div class="md:w-1/2 flex flex-col gap-3">
+        <div class="flex items-start gap-4 bg-black p-4 border-l-2 border-[#FFD600]">
+          <span class="text-[#FFD600] text-xl mt-0.5">✔</span>
+          <div>
+            <span class="font-oswald font-bold uppercase text-white text-base">State Licensed Electricians</span>
+            <p class="font-roboto text-gray-400 text-xs mt-0.5">TDLR-licensed master electricians on every job. No unlicensed workers.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-black p-4 border-l-2 border-[#FFD600]">
+          <span class="text-[#FFD600] text-xl mt-0.5">✔</span>
+          <div>
+            <span class="font-oswald font-bold uppercase text-white text-base">Flat-Rate Honest Pricing</span>
+            <p class="font-roboto text-gray-400 text-xs mt-0.5">You get a quote before we start. No surprises on your invoice.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-black p-4 border-l-2 border-[#FFD600]">
+          <span class="text-[#FFD600] text-xl mt-0.5">✔</span>
+          <div>
+            <span class="font-oswald font-bold uppercase text-white text-base">Clean Work, Every Time</span>
+            <p class="font-roboto text-gray-400 text-xs mt-0.5">We treat your home like ours. No mess left behind — period.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="border-t border-white/10 mt-8 pt-8 text-center text-xs opacity-50">© 2026 City Electric. All rights reserved.</div>
-  </div>
-</footer>
+  </section>
 
-<div class="md:hidden fixed bottom-0 left-0 right-0 p-3 z-50 shadow-lg" style="background:#f59e0b">
-  <a href="tel:4692241991" class="block text-center text-white font-bold text-lg">📞 Call City Electric — (469) 224-1991</a>
-</div>
+  <!-- PHOTO GALLERY STRIP -->
+  <section class="bg-black py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="section-label mb-6 text-center">Our Work</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+        <div class="overflow-hidden aspect-video sm:aspect-auto sm:h-56 bg-[#111]">
+          <img
+            src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Electrical panel work"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+        <div class="overflow-hidden aspect-video sm:aspect-auto sm:h-56 bg-[#111]">
+          <img
+            src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Electrical wiring"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+        <div class="overflow-hidden aspect-video sm:aspect-auto sm:h-56 bg-[#111]">
+          <img
+            src="https://images.pexels.com/photos/2988232/pexels-photo-2988232.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Electrical installation"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="bg-[#0A0A0A] border-y border-[#FFD600]/10 py-12">
+    <div class="max-w-5xl mx-auto px-6">
+      <p class="section-label mb-2 text-center">Reviews</p>
+      <h2 class="font-oswald text-3xl font-bold uppercase text-center mb-8">What Corsicana Says</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="review-card bg-black p-5">
+          <div class="flex gap-0.5 mb-2">
+            <span class="text-[#FFD600] text-sm">★★★★★</span>
+          </div>
+          <p class="font-roboto text-gray-300 text-sm leading-relaxed mb-4">"Panel blew out on a Sunday night. City Electric had someone here within 2 hours. Fixed it fast, priced fair. These are the guys to call."</p>
+          <div>
+            <span class="font-oswald font-bold text-white text-sm uppercase">Mike T.</span>
+            <span class="block font-roboto text-gray-500 text-xs">Corsicana Homeowner</span>
+          </div>
+        </div>
+        <div class="review-card bg-black p-5">
+          <div class="flex gap-0.5 mb-2">
+            <span class="text-[#FFD600] text-sm">★★★★★</span>
+          </div>
+          <p class="font-roboto text-gray-300 text-sm leading-relaxed mb-4">"Did the full rewire on our 1960s house. Everything to code, inspector approved first visit. Clean job, no corners cut. Highly recommend."</p>
+          <div>
+            <span class="font-oswald font-bold text-white text-sm uppercase">Sandra R.</span>
+            <span class="block font-roboto text-gray-500 text-xs">Residential Rewire</span>
+          </div>
+        </div>
+        <div class="review-card bg-black p-5">
+          <div class="flex gap-0.5 mb-2">
+            <span class="text-[#FFD600] text-sm">★★★★★</span>
+          </div>
+          <p class="font-roboto text-gray-300 text-sm leading-relaxed mb-4">"Used them for our shop buildout — 3-phase power, lighting, the works. On time, on budget. Professional team. Will use again for our next expansion."</p>
+          <div>
+            <span class="font-oswald font-bold text-white text-sm uppercase">James K.</span>
+            <span class="block font-roboto text-gray-500 text-xs">Commercial Client</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIG CTA -->
+  <section class="bg-black py-16 border-b-4 border-[#FFD600]">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="section-label mb-3">Ready to Get Started?</p>
+      <h2 class="font-oswald text-5xl sm:text-7xl font-bold uppercase leading-none mb-3">
+        Call Us <span class="text-[#FFD600]">Now</span>
+      </h2>
+      <a href="tel:9036543200" class="font-oswald text-4xl sm:text-6xl font-bold text-[#FFD600] hover:text-white transition-colors block mb-6">
+        (903) 654-3200
+      </a>
+      <p class="font-roboto text-gray-400 text-sm mb-8 max-w-lg mx-auto">
+        Available 24/7 for emergencies. Free estimates on all new work. Serving Corsicana, Navarro County, and surrounding East Texas communities.
+      </p>
+      <a href="tel:9036543200" class="yellow-btn px-12 py-5 text-xl inline-block">
+        ⚡ GET A FREE ESTIMATE
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0A0A0A] py-8 border-t border-[#FFD600]/10">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <span class="font-oswald text-lg font-bold tracking-widest uppercase text-white">City Electric</span>
+        <span class="block font-roboto text-gray-500 text-xs mt-0.5">Corsicana, TX · Licensed &amp; Insured · TDLR</span>
+      </div>
+      <div class="text-center md:text-right">
+        <a href="tel:9036543200" class="font-oswald text-[#FFD600] font-bold text-xl hover:text-white transition-colors">(903) 654-3200</a>
+        <span class="block font-roboto text-gray-500 text-xs mt-0.5">© 2025 City Electric. All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- STICKY MOBILE CALL BUTTON -->
+  <a href="tel:9036543200" class="sticky-call">
+    ⚡ CALL NOW — (903) 654-3200
+  </a>
+
+  <!-- Bottom padding on mobile for sticky bar -->
+  <div class="h-16 md:hidden bg-black"></div>
 
 </body>
 </html>
