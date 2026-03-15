@@ -3,351 +3,566 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>City Electric | Licensed Electricians — Corsicana, TX</title>
+  <title>Bloom Hair Studio — Corsicana, TX</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Karla:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,300;1,400&display=swap" rel="stylesheet" />
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            yellow: { DEFAULT: '#FFD600', 400: '#FFD600', 500: '#F5C800' },
+            blush:    '#FDF2F0',
+            charcoal: '#2D2D2D',
+            rose:     '#C9918F',
+            roseLight:'#E8BAB8',
+            roseDark: '#A66F6D',
           },
           fontFamily: {
-            oswald: ['Oswald', 'sans-serif'],
-            roboto: ['Roboto', 'sans-serif'],
+            heading: ['"Antic Didone"', 'serif'],
+            body:    ['Karla', 'sans-serif'],
+            script:  ['"Cormorant Garamond"', 'serif'],
           },
         }
       }
     }
   </script>
+
   <style>
-    body { font-family: 'Roboto', sans-serif; background: #000; color: #fff; }
-    h1, h2, h3, h4, .font-oswald { font-family: 'Oswald', sans-serif; }
-    .hero-bg {
-      background-image: linear-gradient(to right, rgba(0,0,0,0.88) 45%, rgba(0,0,0,0.45) 100%),
-        url('https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1200');
-      background-size: cover;
-      background-position: center;
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #FDF2F0;
+      color: #2D2D2D;
+      font-family: 'Karla', sans-serif;
     }
-    .yellow-btn {
-      background: #FFD600;
-      color: #000;
-      font-family: 'Oswald', sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: background 0.15s, transform 0.1s;
-    }
-    .yellow-btn:hover { background: #F5C800; transform: translateY(-1px); }
-    .yellow-btn:active { transform: translateY(0); }
-    .service-card { border-left: 3px solid #FFD600; }
-    .stat-bar { background: #FFD600; color: #000; }
-    .review-card { border-top: 3px solid #FFD600; }
-    /* Diagonal accent */
-    .diagonal-cut {
-      clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
-    }
-    .sticky-call {
-      display: none;
-    }
-    @media (max-width: 768px) {
-      .sticky-call {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 100;
-        background: #FFD600;
-        color: #000;
-        font-family: 'Oswald', sans-serif;
-        font-weight: 700;
-        font-size: 1.15rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        align-items: center;
-        justify-content: center;
-        padding: 14px;
-        box-shadow: 0 -4px 20px rgba(255,214,0,0.35);
-        text-decoration: none;
-      }
-    }
-    .nav-bar {
-      background: rgba(0,0,0,0.95);
-      border-bottom: 2px solid #FFD600;
-    }
-    .section-label {
-      font-family: 'Oswald', sans-serif;
+
+    /* Nav */
+    .nav-link {
+      letter-spacing: 0.12em;
       font-size: 0.7rem;
-      letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: #FFD600;
+      font-family: 'Karla', sans-serif;
+      font-weight: 500;
+      color: #2D2D2D;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: #C9918F; }
+
+    /* Hero */
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      overflow: hidden;
+    }
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(45,45,45,0.08) 0%,
+        rgba(45,45,45,0.32) 60%,
+        rgba(45,45,45,0.55) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 2.5rem 5rem 2.5rem;
+    }
+    @media (min-width: 768px) {
+      .hero-content { padding: 0 5rem 6rem 5rem; }
+    }
+
+    /* Section headings */
+    .section-label {
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-size: 0.65rem;
+      font-family: 'Karla', sans-serif;
+      font-weight: 500;
+      color: #C9918F;
+    }
+    h1, h2, h3 {
+      font-family: 'Antic Didone', serif;
+    }
+
+    /* Divider line */
+    .thin-rule {
+      border: none;
+      border-top: 1px solid #E8BAB8;
+    }
+
+    /* Service list */
+    .service-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid #EDD8D6;
+    }
+    .service-name {
+      font-family: 'Antic Didone', serif;
+      font-size: 1.05rem;
+      color: #2D2D2D;
+    }
+    .service-sub {
+      font-family: 'Karla', sans-serif;
+      font-size: 0.75rem;
+      color: #A66F6D;
+      font-weight: 300;
+      margin-top: 2px;
+    }
+    .service-price {
+      font-family: 'Karla', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #2D2D2D;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      margin-left: 1.5rem;
+    }
+
+    /* Gallery masonry */
+    .masonry {
+      columns: 2;
+      column-gap: 0.75rem;
+    }
+    @media (min-width: 768px) {
+      .masonry { columns: 3; column-gap: 1rem; }
+    }
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+    }
+    @media (min-width: 768px) {
+      .masonry-item { margin-bottom: 1rem; }
+    }
+    .masonry-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .masonry-item:hover img {
+      transform: scale(1.03);
+    }
+
+    /* Testimonial */
+    .testimonial-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.75rem;
+      line-height: 1.5;
+      color: #2D2D2D;
+    }
+    @media (min-width: 768px) {
+      .testimonial-quote { font-size: 2.25rem; }
+    }
+
+    /* CTA Button */
+    .btn-primary {
+      display: inline-block;
+      background-color: #C9918F;
+      color: #FDF2F0;
+      font-family: 'Karla', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 1rem 2.8rem;
+      transition: background-color 0.25s, transform 0.2s;
+      text-decoration: none;
+    }
+    .btn-primary:hover {
+      background-color: #A66F6D;
+      transform: translateY(-1px);
+    }
+    .btn-ghost {
+      display: inline-block;
+      border: 1px solid #C9918F;
+      color: #C9918F;
+      font-family: 'Karla', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 1rem 2.8rem;
+      transition: all 0.25s;
+      text-decoration: none;
+    }
+    .btn-ghost:hover {
+      background-color: #C9918F;
+      color: #FDF2F0;
+    }
+
+    /* Fade-in on scroll */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Stylist circle */
+    .stylist-img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    @media (min-width: 768px) {
+      .stylist-img { width: 280px; height: 280px; }
+    }
+
+    /* Nav transparent → solid */
+    #main-nav {
+      transition: background-color 0.4s, box-shadow 0.4s;
+    }
+    #main-nav.scrolled {
+      background-color: #FDF2F0;
+      box-shadow: 0 1px 0 #EDD8D6;
     }
   </style>
 </head>
-<body class="bg-black text-white">
+<body class="antialiased">
 
-  <!-- NAV -->
-  <nav class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 py-3 flex items-center justify-between">
-    <div class="flex items-center gap-3">
-      <span class="inline-block w-2 h-8 bg-[#FFD600] mr-1"></span>
-      <span class="font-oswald text-xl font-bold tracking-widest uppercase text-white">City Electric</span>
-      <span class="hidden sm:inline font-roboto text-xs text-gray-400 ml-2 tracking-wider">Corsicana, TX</span>
+  <!-- ───── NAVIGATION ───── -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 px-6 py-5 flex items-center justify-between">
+    <a href="#" class="font-heading text-xl text-white tracking-widest" id="nav-logo">Bloom</a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#about"    class="nav-link" id="nl1">About</a>
+      <a href="#services" class="nav-link" id="nl2">Services</a>
+      <a href="#gallery"  class="nav-link" id="nl3">Gallery</a>
+      <a href="#book"     class="btn-ghost text-xs py-2 px-5">Book Now</a>
     </div>
-    <a href="tel:9036543200" class="yellow-btn px-5 py-2 text-sm rounded-none tracking-widest">
-      ☎ (903) 654-3200
-    </a>
+    <!-- Mobile menu icon -->
+    <button class="md:hidden focus:outline-none" id="mobile-menu-btn" aria-label="Open menu">
+      <svg class="w-5 h-5 text-white" id="menu-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+      </svg>
+    </button>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero-bg diagonal-cut min-h-screen flex items-center pt-16">
-    <div class="max-w-5xl mx-auto px-6 py-24">
-      <p class="section-label mb-3">Corsicana &amp; East Texas</p>
-      <h1 class="font-oswald text-5xl sm:text-7xl font-bold leading-none uppercase mb-4 max-w-2xl">
-        Licensed<br/>
-        <span class="text-[#FFD600]">Electricians</span><br/>
-        Serving Corsicana
+  <!-- Mobile drawer -->
+  <div id="mobile-drawer" class="fixed inset-0 z-40 bg-blush flex-col items-center justify-center gap-8 hidden">
+    <button id="close-drawer" class="absolute top-5 right-6 nav-link text-charcoal text-lg">✕</button>
+    <a href="#about"    class="font-heading text-3xl text-charcoal" onclick="closeDrawer()">About</a>
+    <a href="#services" class="font-heading text-3xl text-charcoal" onclick="closeDrawer()">Services</a>
+    <a href="#gallery"  class="font-heading text-3xl text-charcoal" onclick="closeDrawer()">Gallery</a>
+    <a href="#book"     class="font-heading text-3xl text-charcoal" onclick="closeDrawer()">Book Now</a>
+  </div>
+
+  <!-- ───── HERO ───── -->
+  <section class="hero-section">
+    <img
+      class="hero-img"
+      src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=1200"
+      alt="Woman with beautifully styled hair"
+      loading="eager"
+    />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="section-label text-roseLight mb-4" style="color:#E8BAB8;">Corsicana, Texas</p>
+      <h1 class="text-white font-heading leading-none mb-6" style="font-size:clamp(2.8rem,7vw,6rem); letter-spacing:-0.01em;">
+        Your Hair,<br/>Elevated.
       </h1>
-      <p class="font-roboto text-gray-300 text-lg max-w-lg mb-8 leading-snug">
-        Residential. Commercial. Industrial. From panel upgrades to whole-home rewiring — done right, done safe, done fast.
+      <p class="text-white font-body font-light text-base max-w-sm mb-8" style="opacity:0.85;">
+        Precision cuts. Custom color. A studio where every detail matters.
       </p>
-      <div class="flex flex-col sm:flex-row gap-3">
-        <a href="tel:9036543200" class="yellow-btn px-8 py-4 text-lg inline-block text-center">
-          ⚡ Call Now: (903) 654-3200
-        </a>
-        <a href="#services" class="inline-block border-2 border-white text-white font-oswald font-bold uppercase tracking-widest px-8 py-4 text-center hover:border-[#FFD600] hover:text-[#FFD600] transition-colors text-lg">
-          Our Services
-        </a>
-      </div>
-      <div class="flex gap-8 mt-10">
-        <div>
-          <span class="font-oswald text-3xl font-bold text-[#FFD600]">15+</span>
-          <span class="block font-roboto text-xs text-gray-400 uppercase tracking-widest">Years Experience</span>
-        </div>
-        <div>
-          <span class="font-oswald text-3xl font-bold text-[#FFD600]">500+</span>
-          <span class="block font-roboto text-xs text-gray-400 uppercase tracking-widest">Jobs Completed</span>
-        </div>
-        <div>
-          <span class="font-oswald text-3xl font-bold text-[#FFD600]">24/7</span>
-          <span class="block font-roboto text-xs text-gray-400 uppercase tracking-widest">Emergency Service</span>
-        </div>
-      </div>
+      <a href="#book" class="btn-primary self-start">Book an Appointment</a>
     </div>
   </section>
 
-  <!-- SERVICES STRIP -->
-  <section id="services" class="bg-black border-b border-[#FFD600]/20 py-12">
-    <div class="max-w-6xl mx-auto px-6">
-      <p class="section-label mb-6 text-center">What We Do</p>
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-0 border border-[#FFD600]/20">
-        <!-- Service 1 -->
-        <div class="service-card bg-[#0A0A0A] p-6 border-b border-r border-[#FFD600]/10 hover:bg-[#111] transition-colors">
-          <div class="text-[#FFD600] text-3xl mb-3">⚡</div>
-          <h3 class="font-oswald text-xl font-bold uppercase mb-2">Panel Upgrades</h3>
-          <p class="font-roboto text-gray-400 text-sm leading-snug">200A upgrades, breaker replacements, load balancing. Code-compliant installs every time.</p>
-        </div>
-        <!-- Service 2 -->
-        <div class="service-card bg-[#0A0A0A] p-6 border-b border-r border-[#FFD600]/10 hover:bg-[#111] transition-colors">
-          <div class="text-[#FFD600] text-3xl mb-3">🏠</div>
-          <h3 class="font-oswald text-xl font-bold uppercase mb-2">Residential Wiring</h3>
-          <p class="font-roboto text-gray-400 text-sm leading-snug">New construction, renovations, outlet additions, ceiling fans, EV charger installs.</p>
-        </div>
-        <!-- Service 3 -->
-        <div class="service-card bg-[#0A0A0A] p-6 border-b border-r border-[#FFD600]/10 hover:bg-[#111] transition-colors">
-          <div class="text-[#FFD600] text-3xl mb-3">🏭</div>
-          <h3 class="font-oswald text-xl font-bold uppercase mb-2">Commercial Work</h3>
-          <p class="font-roboto text-gray-400 text-sm leading-snug">Retail, office, and light industrial. Lighting, data, power distribution, and safety.</p>
-        </div>
-        <!-- Service 4 -->
-        <div class="service-card bg-[#0A0A0A] p-6 border-b border-[#FFD600]/10 hover:bg-[#111] transition-colors">
-          <div class="text-[#FFD600] text-3xl mb-3">🚨</div>
-          <h3 class="font-oswald text-xl font-bold uppercase mb-2">24/7 Emergency</h3>
-          <p class="font-roboto text-gray-400 text-sm leading-snug">Burning smell? Tripped breaker? No power? We answer day and night — including weekends.</p>
-        </div>
-      </div>
-    </div>
+  <!-- ───── INTRO STRIP ───── -->
+  <section class="py-10 px-6 md:px-16 flex items-center gap-4" style="background:#F7E6E3;">
+    <hr class="thin-rule flex-1" />
+    <p class="section-label whitespace-nowrap">Est. 2019 · Bloom Hair Studio</p>
+    <hr class="thin-rule flex-1" />
   </section>
 
-  <!-- WHY CITY ELECTRIC — STATS BAR -->
-  <section class="stat-bar py-10">
-    <div class="max-w-6xl mx-auto px-6">
-      <p class="font-oswald text-xs uppercase tracking-[0.3em] text-black/60 mb-6 text-center">Why Go With City Electric</p>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="text-center border-r border-black/10 last:border-0">
-          <span class="font-oswald text-5xl font-bold text-black leading-none">15+</span>
-          <span class="block font-roboto text-sm font-bold text-black/70 uppercase tracking-wider mt-1">Years in Business</span>
-        </div>
-        <div class="text-center border-r border-black/10 last:border-0">
-          <span class="font-oswald text-5xl font-bold text-black leading-none">500+</span>
-          <span class="block font-roboto text-sm font-bold text-black/70 uppercase tracking-wider mt-1">Jobs Completed</span>
-        </div>
-        <div class="text-center border-r border-black/10 last:border-0">
-          <span class="font-oswald text-5xl font-bold text-black leading-none">100%</span>
-          <span class="block font-roboto text-sm font-bold text-black/70 uppercase tracking-wider mt-1">Licensed &amp; Insured</span>
-        </div>
-        <div class="text-center">
-          <span class="font-oswald text-5xl font-bold text-black leading-none">24/7</span>
-          <span class="block font-roboto text-sm font-bold text-black/70 uppercase tracking-wider mt-1">Emergency Response</span>
-        </div>
+  <!-- ───── ABOUT / STYLIST ───── -->
+  <section id="about" class="py-20 px-6 md:px-16 max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div class="flex justify-center fade-up">
+        <img
+          class="stylist-img"
+          src="https://images.pexels.com/photos/3992874/pexels-photo-3992874.jpeg?auto=compress&cs=tinysrgb&w=800"
+          alt="Stylist at work"
+        />
       </div>
-    </div>
-  </section>
-
-  <!-- ABOUT STRIP -->
-  <section class="bg-[#0A0A0A] border-y border-[#FFD600]/10 py-12">
-    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-start gap-10">
-      <div class="md:w-1/2">
-        <p class="section-label mb-3">About Us</p>
-        <h2 class="font-oswald text-4xl font-bold uppercase leading-tight mb-4">
-          Corsicana's <span class="text-[#FFD600]">Most Trusted</span><br/>Electrical Crew
+      <div class="fade-up" style="transition-delay:0.15s;">
+        <p class="section-label mb-4">Meet Your Stylist</p>
+        <h2 class="font-heading text-4xl md:text-5xl leading-tight mb-6 text-charcoal">
+          Hello,<br/>I'm Mara.
         </h2>
-        <p class="font-roboto text-gray-400 text-sm leading-relaxed mb-4">
-          City Electric has been wiring homes and businesses across Corsicana and Navarro County for over 15 years. We're local — we live here, we work here, and our reputation is everything.
+        <hr class="thin-rule mb-6 w-16" />
+        <p class="font-body font-light text-base leading-relaxed text-charcoal mb-4" style="opacity:0.85;">
+          I've spent over a decade perfecting my craft — trained in New York, rooted in Texas. I believe great hair is a form of self-expression, and my studio is a place where you come as you are and leave as your best self.
         </p>
-        <p class="font-roboto text-gray-400 text-sm leading-relaxed">
-          Every job is done to code. Every crew member is licensed. No subcontractors, no surprises — just clean, professional electrical work from people who stand behind it.
+        <p class="font-body font-light text-base leading-relaxed text-charcoal" style="opacity:0.85;">
+          Whether you're after a lived-in balayage, a razor-sharp cut, or a quiet hour of pampering, Bloom is your space.
         </p>
-      </div>
-      <div class="md:w-1/2 flex flex-col gap-3">
-        <div class="flex items-start gap-4 bg-black p-4 border-l-2 border-[#FFD600]">
-          <span class="text-[#FFD600] text-xl mt-0.5">✔</span>
+        <div class="mt-8 flex gap-6">
           <div>
-            <span class="font-oswald font-bold uppercase text-white text-base">State Licensed Electricians</span>
-            <p class="font-roboto text-gray-400 text-xs mt-0.5">TDLR-licensed master electricians on every job. No unlicensed workers.</p>
+            <p class="font-heading text-3xl text-rose">12+</p>
+            <p class="text-xs font-body uppercase tracking-widest" style="color:#A66F6D;">Years Experience</p>
           </div>
-        </div>
-        <div class="flex items-start gap-4 bg-black p-4 border-l-2 border-[#FFD600]">
-          <span class="text-[#FFD600] text-xl mt-0.5">✔</span>
+          <div style="width:1px; background:#EDD8D6;"></div>
           <div>
-            <span class="font-oswald font-bold uppercase text-white text-base">Flat-Rate Honest Pricing</span>
-            <p class="font-roboto text-gray-400 text-xs mt-0.5">You get a quote before we start. No surprises on your invoice.</p>
+            <p class="font-heading text-3xl text-rose">800+</p>
+            <p class="text-xs font-body uppercase tracking-widest" style="color:#A66F6D;">Happy Clients</p>
           </div>
-        </div>
-        <div class="flex items-start gap-4 bg-black p-4 border-l-2 border-[#FFD600]">
-          <span class="text-[#FFD600] text-xl mt-0.5">✔</span>
+          <div style="width:1px; background:#EDD8D6;"></div>
           <div>
-            <span class="font-oswald font-bold uppercase text-white text-base">Clean Work, Every Time</span>
-            <p class="font-roboto text-gray-400 text-xs mt-0.5">We treat your home like ours. No mess left behind — period.</p>
+            <p class="font-heading text-3xl text-rose">5★</p>
+            <p class="text-xs font-body uppercase tracking-widest" style="color:#A66F6D;">Google Rating</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PHOTO GALLERY STRIP -->
-  <section class="bg-black py-12">
-    <div class="max-w-6xl mx-auto px-6">
-      <p class="section-label mb-6 text-center">Our Work</p>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-        <div class="overflow-hidden aspect-video sm:aspect-auto sm:h-56 bg-[#111]">
-          <img
-            src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt="Electrical panel work"
-            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-          />
-        </div>
-        <div class="overflow-hidden aspect-video sm:aspect-auto sm:h-56 bg-[#111]">
-          <img
-            src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt="Electrical wiring"
-            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-          />
-        </div>
-        <div class="overflow-hidden aspect-video sm:aspect-auto sm:h-56 bg-[#111]">
-          <img
-            src="https://images.pexels.com/photos/2988232/pexels-photo-2988232.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt="Electrical installation"
-            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-          />
-        </div>
-      </div>
-    </div>
+  <!-- ───── SALON INTERIOR FEATURE ───── -->
+  <section class="w-full overflow-hidden fade-up" style="max-height:520px;">
+    <img
+      src="https://images.pexels.com/photos/3065209/pexels-photo-3065209.jpeg?auto=compress&cs=tinysrgb&w=800"
+      alt="Bloom Hair Studio interior"
+      class="w-full object-cover object-center"
+      style="height:520px;"
+    />
   </section>
 
-  <!-- REVIEWS -->
-  <section class="bg-[#0A0A0A] border-y border-[#FFD600]/10 py-12">
-    <div class="max-w-5xl mx-auto px-6">
-      <p class="section-label mb-2 text-center">Reviews</p>
-      <h2 class="font-oswald text-3xl font-bold uppercase text-center mb-8">What Corsicana Says</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="review-card bg-black p-5">
-          <div class="flex gap-0.5 mb-2">
-            <span class="text-[#FFD600] text-sm">★★★★★</span>
-          </div>
-          <p class="font-roboto text-gray-300 text-sm leading-relaxed mb-4">"Panel blew out on a Sunday night. City Electric had someone here within 2 hours. Fixed it fast, priced fair. These are the guys to call."</p>
-          <div>
-            <span class="font-oswald font-bold text-white text-sm uppercase">Mike T.</span>
-            <span class="block font-roboto text-gray-500 text-xs">Corsicana Homeowner</span>
-          </div>
-        </div>
-        <div class="review-card bg-black p-5">
-          <div class="flex gap-0.5 mb-2">
-            <span class="text-[#FFD600] text-sm">★★★★★</span>
-          </div>
-          <p class="font-roboto text-gray-300 text-sm leading-relaxed mb-4">"Did the full rewire on our 1960s house. Everything to code, inspector approved first visit. Clean job, no corners cut. Highly recommend."</p>
-          <div>
-            <span class="font-oswald font-bold text-white text-sm uppercase">Sandra R.</span>
-            <span class="block font-roboto text-gray-500 text-xs">Residential Rewire</span>
-          </div>
-        </div>
-        <div class="review-card bg-black p-5">
-          <div class="flex gap-0.5 mb-2">
-            <span class="text-[#FFD600] text-sm">★★★★★</span>
-          </div>
-          <p class="font-roboto text-gray-300 text-sm leading-relaxed mb-4">"Used them for our shop buildout — 3-phase power, lighting, the works. On time, on budget. Professional team. Will use again for our next expansion."</p>
-          <div>
-            <span class="font-oswald font-bold text-white text-sm uppercase">James K.</span>
-            <span class="block font-roboto text-gray-500 text-xs">Commercial Client</span>
-          </div>
-        </div>
+  <!-- ───── SERVICES ───── -->
+  <section id="services" class="py-20 px-6 md:px-16 max-w-4xl mx-auto">
+    <div class="fade-up text-center mb-14">
+      <p class="section-label mb-4">What We Offer</p>
+      <h2 class="font-heading text-4xl md:text-5xl text-charcoal">The Menu</h2>
+    </div>
+
+    <!-- Color -->
+    <div class="fade-up mb-12">
+      <p class="section-label mb-6">Color</p>
+      <div class="service-row">
+        <div><p class="service-name">Balayage</p><p class="service-sub">Custom, hand-painted dimension</p></div>
+        <p class="service-price">from $185</p>
+      </div>
+      <div class="service-row">
+        <div><p class="service-name">Full Highlights</p><p class="service-sub">Foil technique, full head</p></div>
+        <p class="service-price">from $150</p>
+      </div>
+      <div class="service-row">
+        <div><p class="service-name">Single Process Color</p><p class="service-sub">Root to end all-over color</p></div>
+        <p class="service-price">from $90</p>
+      </div>
+      <div class="service-row">
+        <div><p class="service-name">Toning / Gloss</p><p class="service-sub">Shine-enhancing tone refresh</p></div>
+        <p class="service-price">from $55</p>
+      </div>
+      <div class="service-row">
+        <div><p class="service-name">Color Correction</p><p class="service-sub">Consultation required</p></div>
+        <p class="service-price">Quoted</p>
       </div>
     </div>
-  </section>
 
-  <!-- BIG CTA -->
-  <section class="bg-black py-16 border-b-4 border-[#FFD600]">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <p class="section-label mb-3">Ready to Get Started?</p>
-      <h2 class="font-oswald text-5xl sm:text-7xl font-bold uppercase leading-none mb-3">
-        Call Us <span class="text-[#FFD600]">Now</span>
-      </h2>
-      <a href="tel:9036543200" class="font-oswald text-4xl sm:text-6xl font-bold text-[#FFD600] hover:text-white transition-colors block mb-6">
-        (903) 654-3200
-      </a>
-      <p class="font-roboto text-gray-400 text-sm mb-8 max-w-lg mx-auto">
-        Available 24/7 for emergencies. Free estimates on all new work. Serving Corsicana, Navarro County, and surrounding East Texas communities.
+    <!-- Cuts -->
+    <div class="fade-up mb-12">
+      <p class="section-label mb-6">Cuts & Styling</p>
+      <div class="service-row">
+        <div><p class="service-name">Women's Haircut</p><p class="service-sub">Includes blowout & style</p></div>
+        <p class="service-price">from $75</p>
+      </div>
+      <div class="service-row">
+        <div><p class="service-name">Men's Cut</p><p class="service-sub">Precision cut & style</p></div>
+        <p class="service-price">from $45</p>
+      </div>
+      <div class="service-row">
+        <div><p class="service-name">Blowout</p><p class="service-sub">Smooth, bouncy, polished finish</p></div>
+        <p class="service-price">from $55</p>
+      </div>
+      <div class="service-row">
+        <div><p class="service-name">Special Occasion Updo</p><p class="service-sub">Bridal, events, galas</p></div>
+        <p class="service-price">from $120</p>
+      </div>
+    </div>
+
+    <!-- Treatments -->
+    <div class="fade-up mb-12">
+      <p class="section-label mb-6">Treatments</p>
+      <div class="service-row">
+        <div><p class="service-name">Keratin Smoothing</p><p class="service-sub">3–5 month frizz control</p></div>
+        <p class="service-price">from $250</p>
+      </div>
+      <div class="service-row">
+        <div><p class="service-name">Deep Conditioning</p><p class="service-sub">Hydration + repair mask</p></div>
+        <p class="service-price">from $40</p>
+      </div>
+      <div class="service-row">
+        <div><p class="service-name">Scalp Treatment</p><p class="service-sub">Detox + nourishing massage</p></div>
+        <p class="service-price">from $35</p>
+      </div>
+    </div>
+
+    <div class="fade-up text-center mt-8">
+      <p class="font-body text-sm" style="color:#A66F6D; font-style:italic;">
+        Pricing varies by hair length and density. A consultation is always complimentary.
       </p>
-      <a href="tel:9036543200" class="yellow-btn px-12 py-5 text-xl inline-block">
-        ⚡ GET A FREE ESTIMATE
-      </a>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-[#0A0A0A] py-8 border-t border-[#FFD600]/10">
-    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+  <!-- ───── GALLERY ───── -->
+  <section id="gallery" class="py-20 px-6 md:px-16 max-w-6xl mx-auto">
+    <div class="fade-up text-center mb-12">
+      <p class="section-label mb-4">Our Work</p>
+      <h2 class="font-heading text-4xl md:text-5xl text-charcoal">Hair Stories</h2>
+    </div>
+    <div class="masonry fade-up">
+      <div class="masonry-item">
+        <img src="https://images.pexels.com/photos/3993467/pexels-photo-3993467.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Styling session" />
+      </div>
+      <div class="masonry-item">
+        <img src="https://images.pexels.com/photos/3738355/pexels-photo-3738355.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Beautiful hair result" />
+      </div>
+      <div class="masonry-item">
+        <img src="https://images.pexels.com/photos/7755212/pexels-photo-7755212.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Salon tools" />
+      </div>
+      <div class="masonry-item">
+        <img src="https://images.pexels.com/photos/3065209/pexels-photo-3065209.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Salon interior" />
+      </div>
+      <div class="masonry-item">
+        <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Styled hair" />
+      </div>
+      <div class="masonry-item">
+        <img src="https://images.pexels.com/photos/3992874/pexels-photo-3992874.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Stylist at work" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── TESTIMONIAL ───── -->
+  <section style="background:#F7E6E3;" class="py-24 px-6 md:px-16">
+    <div class="max-w-3xl mx-auto text-center fade-up">
+      <p class="section-label mb-10">Kind Words</p>
+      <p class="testimonial-quote mb-10 text-charcoal">
+        "I've never left a salon feeling so completely myself. Mara didn't just cut my hair — she understood exactly who I was trying to be."
+      </p>
+      <hr class="thin-rule w-12 mx-auto mb-6" />
+      <p class="font-body text-sm uppercase tracking-widest" style="color:#A66F6D;">— Jessie R., Corsicana TX</p>
+    </div>
+  </section>
+
+  <!-- ───── BOOK CTA ───── -->
+  <section id="book" class="py-28 px-6 md:px-16 max-w-2xl mx-auto text-center">
+    <div class="fade-up">
+      <p class="section-label mb-6">Ready?</p>
+      <h2 class="font-heading text-4xl md:text-6xl text-charcoal mb-4 leading-tight">
+        Let's create<br/>something beautiful.
+      </h2>
+      <p class="font-body font-light text-base text-charcoal mb-10" style="opacity:0.7;">
+        New clients always welcome. Book online or call the studio — we'd love to meet you.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="tel:+19035550178" class="btn-primary">Call (903) 555-0178</a>
+        <a href="#" class="btn-ghost">Book Online</a>
+      </div>
+      <p class="font-body text-xs mt-8 uppercase tracking-widest" style="color:#A66F6D;">
+        Tue – Sat &nbsp;·&nbsp; 9am – 6pm &nbsp;·&nbsp; Corsicana, TX
+      </p>
+    </div>
+  </section>
+
+  <!-- ───── FOOTER ───── -->
+  <footer style="background:#2D2D2D;" class="py-14 px-6 md:px-16">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 items-start">
       <div>
-        <span class="font-oswald text-lg font-bold tracking-widest uppercase text-white">City Electric</span>
-        <span class="block font-roboto text-gray-500 text-xs mt-0.5">Corsicana, TX · Licensed &amp; Insured · TDLR</span>
+        <p class="font-heading text-2xl text-blush tracking-widest mb-3">Bloom</p>
+        <p class="font-body font-light text-sm" style="color:#c4a8a7; line-height:1.7;">
+          A boutique hair studio in<br/>Corsicana, Texas.
+        </p>
       </div>
-      <div class="text-center md:text-right">
-        <a href="tel:9036543200" class="font-oswald text-[#FFD600] font-bold text-xl hover:text-white transition-colors">(903) 654-3200</a>
-        <span class="block font-roboto text-gray-500 text-xs mt-0.5">© 2025 City Electric. All Rights Reserved.</span>
+      <div>
+        <p class="section-label mb-4" style="color:#C9918F;">Studio</p>
+        <p class="font-body font-light text-sm mb-1" style="color:#c4a8a7;">123 Main Street, Corsicana, TX 75110</p>
+        <a href="tel:+19035550178" class="font-body font-light text-sm hover:text-rose transition-colors" style="color:#c4a8a7;">(903) 555-0178</a>
+        <p class="font-body font-light text-sm mt-2" style="color:#c4a8a7;">Tue – Sat, 9am – 6pm</p>
       </div>
+      <div>
+        <p class="section-label mb-4" style="color:#C9918F;">Follow Along</p>
+        <div class="flex gap-5">
+          <a href="#" class="font-body text-sm hover:text-rose transition-colors" style="color:#c4a8a7; text-decoration:none;">Instagram</a>
+          <a href="#" class="font-body text-sm hover:text-rose transition-colors" style="color:#c4a8a7; text-decoration:none;">Facebook</a>
+          <a href="#" class="font-body text-sm hover:text-rose transition-colors" style="color:#c4a8a7; text-decoration:none;">Pinterest</a>
+        </div>
+      </div>
+    </div>
+    <hr style="border-color:#3D3D3D; margin-top:2.5rem; margin-bottom:2rem;" />
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-body text-xs" style="color:#7a6060;">© 2026 Bloom Hair Studio. All rights reserved.</p>
+      <p class="font-body text-xs" style="color:#7a6060;">
+        Site by <span style="color:#C9918F;">Coastal Catch Agency</span>
+      </p>
     </div>
   </footer>
 
-  <!-- STICKY MOBILE CALL BUTTON -->
-  <a href="tel:9036543200" class="sticky-call">
-    ⚡ CALL NOW — (903) 654-3200
-  </a>
+  <script>
+    // ── Nav scroll behavior ──
+    const nav = document.getElementById('main-nav');
+    const navLogo = document.getElementById('nav-logo');
+    const navLinks = document.querySelectorAll('.nav-link[id]');
+    const mobileIcon = document.getElementById('menu-icon');
 
-  <!-- Bottom padding on mobile for sticky bar -->
-  <div class="h-16 md:hidden bg-black"></div>
+    function updateNav() {
+      if (window.scrollY > 60) {
+        nav.classList.add('scrolled');
+        navLogo.style.color = '#2D2D2D';
+        mobileIcon.style.color = '#2D2D2D';
+      } else {
+        nav.classList.remove('scrolled');
+        navLogo.style.color = '#fff';
+        mobileIcon.style.color = '#fff';
+      }
+    }
+    window.addEventListener('scroll', updateNav);
+    updateNav();
 
+    // ── Mobile drawer ──
+    const drawer = document.getElementById('mobile-drawer');
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      drawer.style.display = 'flex';
+    });
+    document.getElementById('close-drawer').addEventListener('click', closeDrawer);
+    function closeDrawer() {
+      drawer.style.display = 'none';
+    }
+
+    // ── Fade-up on scroll ──
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
