@@ -14,15 +14,15 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://thrivebrightlife.com/blog/why-local-businesses-need-website.html">
 
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
       fontFamily: {
-        display: ['"Playfair Display"', 'serif'],
-        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+        display: ['"Inter"', 'sans-serif'],
+        body: ['"Plus Jakarta Sans"', 'sans-sans-serif'],
       },
       colors: {
         navy: { 900: '#0f0f23', 800: '#1a1a3e', 700: '#2d1b69' },
@@ -33,7 +33,7 @@ tailwind.config = {
 }
 </script>
 <style>
-body { font-family: 'Plus Jakarta Sans', sans-serif; }
+body { font-family: 'Plus Jakarta Sans', sans-sans-serif; }
 .gradient-text { background: linear-gradient(135deg, #a78bfa, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .glow { box-shadow: 0 0 60px rgba(99, 102, 241, 0.3); }
 .grain::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); opacity: 0.4; pointer-events: none; z-index: 0; }
@@ -41,7 +41,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; }
 .blob-2 { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(236,72,153,0.08) 0%, transparent 70%); border-radius: 50%; bottom: -100px; left: -100px; pointer-events: none; }
 .scroll-reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
 .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
-.prose-content h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: white; }
+.prose-content h2 { font-family: 'Inter', sans-serif; font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: white; }
 .prose-content p { color: #9ca3af; line-height: 1.8; margin-bottom: 1.2rem; }
 .prose-content strong { color: white; }
 .prose-content ul { margin: 1rem 0 1.2rem 0; }

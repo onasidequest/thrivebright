@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | ThriveBright — Web Design Tips for Local Businesses</title>
+<meta name="description" content="Practical tips on websites, SEO, and online marketing for local businesses. From the ThriveBright team.">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['"Inter"', 'sans-serif'],
+        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+      },
+      colors: {
+        navy: { 900: '#0f0f23', 800: '#1a1a3e', 700: '#2d1b69' },
+        accent: { purple: '#6366f1', pink: '#ec4899' },
+      }
+    }
+  }
+}
+</script>
+<style>body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
+</head>
+<body class="bg-navy-900 text-white min-h-screen">
+
+<!-- NAV -->
+<nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-navy-900/80 border-b border-white/5">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="/" class="font-display text-xl font-bold">Thrive<span class="text-accent-purple">Bright</span></a>
+    <div class="hidden md:flex items-center gap-8 text-sm text-gray-400">
+      <a href="/#services" class="hover:text-white transition">Services</a>
+      <a href="/#pricing" class="hover:text-white transition">Pricing</a>
+      <a href="/#portfolio" class="hover:text-white transition">Portfolio</a>
+      <a href="/faq.html" class="hover:text-white transition">FAQ</a>
+      <a href="/blog/" class="hover:text-white transition text-white">Blog</a>
+      <a href="/#contact" class="hover:text-white transition">Contact</a>
+    </div>
+    <a href="/#mockup" class="bg-accent-purple hover:bg-purple-500 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:shadow-lg hover:shadow-purple-500/25">Get Free Mockup</a>
+  </div>
+</nav>
+
+<!-- BLOG LISTING -->
+<main class="max-w-4xl mx-auto px-6 pt-32 pb-20">
+  <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">Blog</h1>
+  <p class="text-gray-400 text-lg mb-12">Practical tips on websites, SEO, and growing your local business online.</p>
+
+  <div class="space-y-8">
+    <!-- Post 1 -->
+    <a href="how-much-does-website-cost.html" class="block bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-accent-purple/50 transition-all hover:bg-white/[0.07]">
+      <p class="text-sm text-purple-400 font-medium mb-2">Pricing Guide</p>
+      <h2 class="font-display text-2xl font-bold mb-3">How Much Does a Website Cost in 2026?</h2>
+      <p class="text-gray-400">A straightforward breakdown of what small businesses should expect to pay for a professional website — and what you're actually getting at each price point.</p>
+    </a>
+
+    <!-- Post 2 -->
+    <a href="why-local-businesses-need-website.html" class="block bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-accent-purple/50 transition-all hover:bg-white/[0.07]">
+      <p class="text-sm text-purple-400 font-medium mb-2">Getting Started</p>
+      <h2 class="font-display text-2xl font-bold mb-3">Why Every Local Business Needs a Website in 2026</h2>
+      <p class="text-gray-400">Still relying on word of mouth and a Facebook page? Here's why that's costing you customers — and what to do about it.</p>
+    </a>
+  </div>
+
+  <div class="mt-16 text-center">
+    <p class="text-gray-500 mb-4">Want a website that brings in more customers?</p>
+    <a href="/#mockup" class="inline-block bg-accent-purple hover:bg-purple-500 text-white px-8 py-3 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-purple-500/25">Get Your Free Mockup →</a>
+  </div>
+</main>
+
+</body>
+</html>
