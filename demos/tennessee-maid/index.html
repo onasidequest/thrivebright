@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tennessee Maid | Professional Cleaning in Maryville, TN</title>
+<meta name="description" content="Professional home and office cleaning in Maryville, TN. Reliable, thorough, and affordable. Book your cleaning today.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; color: #1a1a2e; background: #fff; -webkit-font-smoothing: antialiased; }
+  
+  /* Top bar */
+  .topbar { background: #0d9488; color: #fff; font-size: 0.85rem; padding: 10px 0; }
+  .topbar .inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+  .topbar a { color: #fff; text-decoration: none; font-weight: 600; }
+
+  /* Nav */
+  nav { background: #fff; border-bottom: 1px solid #f0f0f0; position: sticky; top: 0; z-index: 50; }
+  nav .inner { max-width: 1100px; margin: 0 auto; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-size: 1.6rem; font-weight: 800; color: #0d9488; }
+  .logo span { color: #1a1a2e; }
+  .nav-links { display: flex; gap: 32px; align-items: center; font-size: 0.95rem; font-weight: 500; color: #555; }
+  .nav-links a { text-decoration: none; color: inherit; }
+  .nav-links a:hover { color: #0d9488; }
+  .btn-primary { background: #0d9488; color: #fff; padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.95rem; border: none; cursor: pointer; display: inline-block; }
+  .btn-primary:hover { background: #0f766e; }
+  .btn-outline { border: 2px solid #0d9488; color: #0d9488; padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.95rem; display: inline-block; background: transparent; }
+  .btn-outline:hover { background: #0d9488; color: #fff; }
+
+  /* Hero */
+  .hero { position: relative; min-height: 600px; display: flex; align-items: center; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; }
+  .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(13,148,136,0.92) 0%, rgba(15,118,110,0.85) 100%); }
+  .hero .inner { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+  .hero-badge { display: inline-block; background: rgba(255,255,255,0.15); color: #fff; font-size: 0.85rem; font-weight: 600; padding: 8px 20px; border-radius: 50px; margin-bottom: 24px; backdrop-filter: blur(4px); }
+  .hero h1 { font-size: 3.2rem; font-weight: 900; color: #fff; line-height: 1.15; margin-bottom: 20px; max-width: 600px; }
+  .hero p { font-size: 1.2rem; color: rgba(255,255,255,0.85); max-width: 520px; line-height: 1.7; margin-bottom: 32px; }
+  .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero .btn-white { background: #fff; color: #0d9488; padding: 16px 32px; border-radius: 50px; font-weight: 800; font-size: 1.05rem; text-decoration: none; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+  .hero .btn-ghost { border: 2px solid rgba(255,255,255,0.4); color: #fff; padding: 16px 32px; border-radius: 50px; font-weight: 600; font-size: 1.05rem; text-decoration: none; }
+  .hero .btn-ghost:hover { background: rgba(255,255,255,0.1); }
+
+  /* Services */
+  .services { padding: 80px 0; background: #f8fafb; }
+  .services .inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .section-label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #0d9488; margin-bottom: 12px; }
+  .section-title { font-size: 2.4rem; font-weight: 800; margin-bottom: 16px; color: #1a1a2e; }
+  .section-sub { font-size: 1.1rem; color: #666; max-width: 550px; line-height: 1.7; margin-bottom: 48px; }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .service-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border: 1px solid #eee; transition: transform 0.2s, box-shadow 0.2s; }
+  .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+  .service-card img { width: 100%; height: 200px; object-fit: cover; }
+  .service-card .card-body { padding: 24px; }
+  .service-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
+  .service-card p { font-size: 0.95rem; color: #666; line-height: 1.6; }
+
+  /* Why section */
+  .why { padding: 80px 0; }
+  .why .inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .why-img { border-radius: 20px; overflow: hidden; }
+  .why-img img { width: 100%; height: 400px; object-fit: cover; display: block; }
+  .why-list { list-style: none; }
+  .why-list li { display: flex; gap: 16px; margin-bottom: 24px; }
+  .why-icon { width: 48px; height: 48px; background: #e6f7f5; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+  .why-text h4 { font-weight: 700; font-size: 1.05rem; margin-bottom: 4px; }
+  .why-text p { font-size: 0.9rem; color: #666; line-height: 1.5; }
+
+  /* CTA */
+  .cta { padding: 80px 0; background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%); color: #fff; text-align: center; }
+  .cta .inner { max-width: 700px; margin: 0 auto; padding: 0 24px; }
+  .cta h2 { font-size: 2.4rem; font-weight: 800; margin-bottom: 16px; }
+  .cta p { font-size: 1.15rem; opacity: 0.85; margin-bottom: 32px; line-height: 1.7; }
+  .cta .btn-white { background: #fff; color: #0d9488; padding: 16px 36px; border-radius: 50px; font-weight: 800; font-size: 1.1rem; text-decoration: none; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+
+  /* Footer */
+  footer { background: #111827; color: #fff; padding: 48px 0; }
+  footer .inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; text-align: center; }
+  footer .logo-foot { font-size: 1.3rem; font-weight: 800; margin-bottom: 8px; }
+  footer .addr { color: #9ca3af; font-size: 0.9rem; margin-bottom: 16px; }
+  footer .copy { color: #4b5563; font-size: 0.8rem; }
+
+  /* Mobile nav */
+  .mobile-nav { display: none; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .mobile-nav { display: block; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero { min-height: 500px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; gap: 32px; }
+    .section-title { font-size: 1.8rem; }
+    .cta h2 { font-size: 1.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="topbar">
+  <div class="inner">
+    <span>🏠 Professional Cleaning · Maryville, TN</span>
+    <a href="tel:+1XXXXXXXXXX">Call for a Free Quote →</a>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav>
+  <div class="inner">
+    <div class="logo">Tennessee <span>Maid</span></div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn-primary">Get a Free Quote</a>
+    </div>
+    <a href="#contact" class="btn-primary mobile-nav">Free Quote</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1400&q=80" alt="Clean modern home interior">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="inner">
+    <div class="hero-badge">✨ Trusted by Maryville Families</div>
+    <h1>A Cleaner Home Without the Hassle.</h1>
+    <p>Professional residential and commercial cleaning in Maryville, TN. Reliable, thorough, and always on time.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-white">Get a Free Quote</a>
+      <a href="#services" class="btn-ghost">Our Services →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="inner">
+    <div class="section-label">What We Do</div>
+    <div class="section-title">Cleaning Services You Can Count On</div>
+    <div class="section-sub">From weekly home cleanings to deep cleans and move-out jobs — we handle it all so you don't have to.</div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80" alt="Clean kitchen">
+        <div class="card-body">
+          <h3>Regular Home Cleaning</h3>
+          <p>Weekly, bi-weekly, or monthly visits. Kitchen, bathrooms, floors, dusting — the works. Come home to clean.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1527515637462-cff94eebd21f?w=600&q=80" alt="Deep cleaning supplies">
+        <div class="card-body">
+          <h3>Deep Cleaning</h3>
+          <p>Top-to-bottom scrub for when your home needs extra attention. Behind appliances, inside cabinets, baseboards — all of it.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80" alt="Moving boxes in clean room">
+        <div class="card-body">
+          <h3>Move-In / Move-Out</h3>
+          <p>Starting fresh or leaving a place spotless. We make sure every surface is ready for what's next.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Us -->
+<section class="why" id="why">
+  <div class="inner">
+    <div class="why-grid">
+      <div class="why-img">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=700&q=80" alt="Professional cleaning">
+      </div>
+      <div>
+        <div class="section-label">Why Tennessee Maid</div>
+        <div class="section-title" style="margin-bottom:32px;">Cleaning Done Right,<br>Every Time.</div>
+        <ul class="why-list">
+          <li>
+            <div class="why-icon">🔒</div>
+            <div class="why-text">
+              <h4>Trusted & Reliable</h4>
+              <p>Background-checked team. Consistent quality. We show up when we say we will.</p>
+            </div>
+          </li>
+          <li>
+            <div class="why-icon">🧴</div>
+            <div class="why-text">
+              <h4>Supplies Included</h4>
+              <p>We bring everything — products, equipment, and the elbow grease. You just relax.</p>
+            </div>
+          </li>
+          <li>
+            <div class="why-icon">⭐</div>
+            <div class="why-text">
+              <h4>Satisfaction Guaranteed</h4>
+              <p>Not happy with something? We'll come back and make it right. No questions asked.</p>
+            </div>
+          </li>
+          <li>
+            <div class="why-icon">📍</div>
+            <div class="why-text">
+              <h4>Locally Owned</h4>
+              <p>Based right here in Maryville. We're your neighbors — not a faceless franchise.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="inner">
+    <h2>Ready for a Cleaner Home?</h2>
+    <p>Get a free, no-obligation quote. Tell us about your space and we'll take it from there.</p>
+    <a href="mailto:tennesseemaidservices@gmail.com?subject=Free%20Quote%20Request" class="btn-white">Request Your Free Quote →</a>
+    <p style="margin-top: 20px; font-size: 0.95rem; opacity: 0.7;">Or call us — we'd love to hear from you.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="inner">
+    <div class="logo-foot">Tennessee Maid</div>
+    <div class="addr">Maryville, TN · Professional Cleaning Services</div>
+    <div class="copy">© 2026 Tennessee Maid. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
