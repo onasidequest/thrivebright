@@ -82,6 +82,10 @@
   footer .addr { color: #9ca3af; font-size: 0.9rem; margin-bottom: 16px; }
   footer .copy { color: #4b5563; font-size: 0.8rem; }
 
+  /* Photo strip */
+  .photo-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+  .photo-strip img { width: 100%; height: 240px; object-fit: cover; display: block; }
+
   /* Mobile nav */
   .mobile-nav { display: none; }
 
@@ -95,6 +99,8 @@
     .why-grid { grid-template-columns: 1fr; gap: 32px; }
     .section-title { font-size: 1.8rem; }
     .cta h2 { font-size: 1.8rem; }
+    .photo-strip { grid-template-columns: repeat(2, 1fr); }
+    .photo-strip img { height: 180px; }
   }
 </style>
 </head>
@@ -171,6 +177,14 @@
   </div>
 </section>
 
+<!-- Photo Break -->
+<section class="photo-strip">
+  <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&q=80" alt="Cleaning living room">
+  <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=400&q=80" alt="Sparkling bathroom">
+  <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=400&q=80" alt="Modern clean kitchen">
+  <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&q=80" alt="Bright clean apartment">
+</section>
+
 <!-- Why Us -->
 <section class="why" id="why">
   <div class="inner">
@@ -216,13 +230,15 @@
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta" id="contact">
-  <div class="inner">
-    <h2>Ready for a Cleaner Home?</h2>
-    <p>Get a free, no-obligation quote. Tell us about your space and we'll take it from there.</p>
-    <a href="mailto:tennesseemaidservices@gmail.com?subject=Free%20Quote%20Request" class="btn-white">Request Your Free Quote →</a>
-    <p style="margin-top: 20px; font-size: 0.95rem; opacity: 0.7;">Or call us — we'd love to hear from you.</p>
+<!-- CTA with photo background -->
+<section id="contact" style="position:relative; min-height:420px; display:flex; align-items:center; justify-content:center; text-align:center; overflow:hidden;">
+  <img src="https://images.unsplash.com/photo-1527515545081-5db817172677?w=1400&q=80" alt="Beautiful clean home" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+  <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.65));"></div>
+  <div style="position:relative; z-index:2; padding:60px 24px; max-width:700px;">
+    <h2 style="font-size:2.4rem; font-weight:800; color:#fff; margin-bottom:16px;">Ready for a Cleaner Home?</h2>
+    <p style="font-size:1.15rem; color:rgba(255,255,255,0.85); margin-bottom:32px; line-height:1.7;">Get a free, no-obligation quote. Tell us about your space and we'll take it from there.</p>
+    <a href="mailto:tennesseemaidservices@gmail.com?subject=Free%20Quote%20Request" class="btn-white" style="background:#fff; color:#0d9488; padding:16px 36px; border-radius:50px; font-weight:800; font-size:1.1rem; text-decoration:none; box-shadow:0 4px 20px rgba(0,0,0,0.2);">Request Your Free Quote →</a>
+    <p style="margin-top:20px; font-size:0.95rem; color:rgba(255,255,255,0.6);">Or call us — we'd love to hear from you.</p>
   </div>
 </section>
 
