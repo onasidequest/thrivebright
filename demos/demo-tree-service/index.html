@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canopy Tree Care | Raleigh, NC</title>
+<meta name="description" content="Professional tree care in Raleigh, NC. Tree trimming, removal, and stump grinding. Locally owned, ISA-certified arborists.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; color: #2d2d2d; background: #fff; -webkit-font-smoothing: antialiased; font-size: 16px; line-height: 1.6; }
+  h1, h2, h3, h4 { font-family: 'Sora', sans-serif; }
+  img { display: block; max-width: 100%; }
+  a { text-decoration: none; }
+
+  /* === NAV === */
+  .nav { padding: 20px 0; border-bottom: 1px solid #eee; }
+  .nav .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+  .nav-brand { font-family: 'Sora', sans-serif; font-size: 1.1rem; font-weight: 800; color: #1a1a1a; letter-spacing: 3px; text-transform: uppercase; }
+  .nav-brand em { font-style: normal; color: #5c6e3a; letter-spacing: 3px; }
+  .nav-links { display: flex; gap: 28px; align-items: center; font-size: 0.9rem; color: #555; }
+  .nav-links a { color: inherit; transition: color 0.2s; }
+  .nav-links a:hover { color: #1a1a1a; }
+  .nav-cta { background: #5c6e3a; color: #fff; padding: 10px 24px; border-radius: 6px; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.3px; }
+  .nav-cta:hover { background: #4a5a2e; }
+  .mobile-nav { display: none; }
+
+  /* === HERO === */
+  .hero { max-width: 1080px; margin: 0 auto; padding: 48px 24px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .hero-text h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.1; color: #1a1a1a; margin-bottom: 20px; letter-spacing: -1px; }
+  .hero-text h1 span { color: #5c6e3a; }
+  .hero-text p { font-size: 1.05rem; color: #666; max-width: 440px; margin-bottom: 28px; line-height: 1.7; }
+  .hero-text .hero-btns { display: flex; gap: 12px; align-items: center; }
+  .btn-dark { background: #1a1a1a; color: #fff; padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; display: inline-block; }
+  .btn-dark:hover { background: #333; }
+  .btn-text { color: #5c6e3a; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; }
+  .hero-img { position: relative; }
+  .hero-img img { border-radius: 16px; width: 100%; height: 420px; object-fit: cover; }
+  .hero-img .badge { position: absolute; bottom: -16px; left: 24px; background: #fff; padding: 14px 20px; border-radius: 10px; box-shadow: 0 4px 24px rgba(0,0,0,0.1); font-size: 0.85rem; font-weight: 600; color: #1a1a1a; display: flex; align-items: center; gap: 8px; }
+  .badge-stars { color: #e8a838; }
+
+  /* === TRUST BAR === */
+  .trust-bar { max-width: 1080px; margin: 28px auto 0; padding: 0 24px; display: flex; justify-content: center; gap: 48px; }
+  .trust-item { text-align: center; }
+  .trust-num { font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800; color: #1a1a1a; }
+  .trust-label { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+  /* === DIVIDER === */
+  .full-img { width: 100%; height: 320px; object-fit: cover; margin: 32px 0; }
+
+  /* === SERVICES === */
+  .services { max-width: 1080px; margin: 0 auto; padding: 32px 24px 48px; }
+  .services-header { max-width: 480px; margin-bottom: 32px; }
+  .services-header h2 { font-size: 2rem; font-weight: 700; color: #1a1a1a; margin-bottom: 12px; letter-spacing: -0.5px; }
+  .services-header p { color: #777; font-size: 1rem; }
+  .services-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; }
+  .service-big { position: relative; border-radius: 14px; overflow: hidden; }
+  .service-big img { width: 100%; height: 100%; min-height: 400px; object-fit: cover; }
+  .service-big .overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 32px; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); }
+  .service-big h3 { font-size: 1.4rem; color: #fff; font-weight: 700; margin-bottom: 6px; }
+  .service-big p { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
+  .service-stack { display: flex; flex-direction: column; gap: 24px; }
+  .service-sm { border-radius: 14px; overflow: hidden; position: relative; flex: 1; }
+  .service-sm img { width: 100%; height: 100%; min-height: 188px; object-fit: cover; }
+  .service-sm .overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(to top, rgba(0,0,0,0.65), transparent); }
+  .service-sm h3 { font-size: 1.05rem; color: #fff; font-weight: 700; margin-bottom: 4px; }
+  .service-sm p { color: rgba(255,255,255,0.75); font-size: 0.82rem; }
+
+  /* === APPROACH === */
+  .approach { background: #f7f6f3; padding: 48px 0; }
+  .approach .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .approach-img img { border-radius: 14px; width: 100%; height: 380px; object-fit: cover; }
+  .approach-text h2 { font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin-bottom: 20px; letter-spacing: -0.5px; }
+  .approach-list { list-style: none; }
+  .approach-list li { display: flex; gap: 14px; margin-bottom: 22px; }
+  .approach-list .dot { width: 10px; height: 10px; background: #5c6e3a; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+  .approach-list h4 { font-size: 0.95rem; font-weight: 700; color: #1a1a1a; margin-bottom: 2px; }
+  .approach-list p { font-size: 0.88rem; color: #777; line-height: 1.5; }
+
+  /* === REVIEWS === */
+  .reviews { max-width: 1080px; margin: 0 auto; padding: 48px 24px 40px; }
+  .reviews h2 { font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin-bottom: 40px; letter-spacing: -0.5px; }
+  .reviews-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .review-card { background: #f7f6f3; border-radius: 14px; padding: 32px; }
+  .review-card .stars { color: #e8a838; font-size: 0.95rem; margin-bottom: 14px; letter-spacing: 2px; }
+  .review-card blockquote { font-size: 0.95rem; color: #444; line-height: 1.7; margin-bottom: 18px; }
+  .review-card .author { font-weight: 700; font-size: 0.85rem; color: #1a1a1a; }
+  .review-card .loc { font-size: 0.78rem; color: #999; }
+
+  /* === CTA === */
+  .cta { background: #1a1a1a; padding: 48px 0; }
+  .cta .wrap { max-width: 640px; margin: 0 auto; padding: 0 24px; text-align: center; }
+  .cta h2 { font-size: 2.2rem; font-weight: 700; color: #fff; margin-bottom: 14px; letter-spacing: -0.5px; }
+  .cta p { color: #999; font-size: 1.05rem; margin-bottom: 32px; line-height: 1.7; }
+  .btn-white { background: #fff; color: #1a1a1a; padding: 14px 32px; border-radius: 6px; font-weight: 700; font-size: 0.95rem; display: inline-block; }
+  .btn-white:hover { background: #f0f0f0; }
+  .cta-phone { color: #666; font-size: 0.9rem; margin-top: 16px; }
+
+  /* === FOOTER === */
+  footer { padding: 32px 0; border-top: 1px solid #eee; }
+  footer .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; color: #999; }
+  footer a { color: #666; }
+
+  /* === MOBILE === */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .mobile-nav { display: block; }
+    .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 40px; }
+    .hero-text h1 { font-size: 2.1rem; }
+    .hero-img img { height: 300px; }
+    .trust-bar { flex-wrap: wrap; gap: 24px; }
+    .services-layout { grid-template-columns: 1fr; }
+    .service-big img { min-height: 280px; }
+    .approach .wrap { grid-template-columns: 1fr; gap: 32px; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .cta h2 { font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<div class="nav">
+  <div class="wrap">
+    <div class="nav-brand">canopy <em>tree</em> care</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#approach">Our Approach</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact" class="nav-cta">Get a Free Quote</a>
+    </div>
+    <a href="#contact" class="nav-cta mobile-nav">Quote</a>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Your trees, in <span>good hands.</span></h1>
+    <p>Professional tree care in Raleigh. We assess, prune, and remove with precision — protecting your property and the health of every tree on it. ISA-certified. Fully insured.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-dark">Get a Free Quote</a>
+      <a href="#services" class="btn-text">See services ↓</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.pexels.com/photos/1048018/pexels-photo-1048018.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Arborist trimming large oak tree branches with professional equipment">
+    <div class="badge">
+      <span class="badge-stars">★★★★★</span> 4.9 from 160+ reviews
+    </div>
+  </div>
+</section>
+
+<!-- Trust Bar -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <div class="trust-num">12+</div>
+    <div class="trust-label">Years in Raleigh</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num">3,000+</div>
+    <div class="trust-label">Trees Serviced</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num">4.9</div>
+    <div class="trust-label">Google Rating</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num">ISA</div>
+    <div class="trust-label">Certified Arborists</div>
+  </div>
+</div>
+
+<!-- Divider -->
+<img class="full-img" src="https://images.pexels.com/photos/167698/pexels-photo-167698.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Large mature tree canopy against blue sky">
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="services-header">
+    <h2>What we do</h2>
+    <p>Every tree is different. We tailor our approach based on species, structure, and what your property actually needs.</p>
+  </div>
+  <div class="services-layout">
+    <div class="service-big">
+      <img src="https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Professional arborist trimming oak tree from elevated platform">
+      <div class="overlay">
+        <h3>Tree Trimming</h3>
+        <p>Structural pruning, crown thinning, deadwood removal — we shape for health and longevity, not just looks.</p>
+      </div>
+    </div>
+    <div class="service-stack">
+      <div class="service-sm">
+        <img src="https://images.pexels.com/photos/5063591/pexels-photo-5063591.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tree removal crew safely felling large pine tree">
+        <div class="overlay">
+          <h3>Tree Removal</h3>
+          <p>Safe, controlled removal of dead, diseased, or hazardous trees — even in tight spots.</p>
+        </div>
+      </div>
+      <div class="service-sm">
+        <img src="https://images.pexels.com/photos/2284170/pexels-photo-2284170.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Stump grinder machine removing tree stump flush with ground">
+        <div class="overlay">
+          <h3>Stump Grinding</h3>
+          <p>We grind stumps below grade and clean up the chips. Ready for replanting or sod.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Approach -->
+<section class="approach" id="approach">
+  <div class="wrap">
+    <div class="approach-img">
+      <img src="https://images.pexels.com/photos/7632038/pexels-photo-7632038.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Arborist in safety harness working high in tree canopy">
+    </div>
+    <div class="approach-text">
+      <h2>How we work</h2>
+      <ul class="approach-list">
+        <li>
+          <div class="dot"></div>
+          <div>
+            <h4>Free on-site assessment</h4>
+            <p>We walk your property, look at every tree, and give you an honest recommendation — not just a sales pitch.</p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div>
+            <h4>ISA-certified arborists on every job</h4>
+            <p>Not just crew members — certified professionals who understand tree biology and proper cutting techniques.</p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div>
+            <h4>Fully insured, always</h4>
+            <p>$2M liability and workers' comp on every crew. We take the risk so you don't have to.</p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div>
+            <h4>Clean site, every time</h4>
+            <p>We haul away all debris. You won't even know we were there — except your yard will look better.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews" id="reviews">
+  <h2>What our clients say</h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Had a massive water oak leaning toward our roof. Canopy came out the next day, assessed it, and had it down safely by Friday. Incredibly professional from start to finish."</blockquote>
+      <div class="author">Tom B.</div>
+      <div class="loc">North Hills</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"They trimmed four large oaks in our backyard and the difference is incredible. Honest about what needed to be done and what didn't. I really appreciated that."</blockquote>
+      <div class="author">Priya S.</div>
+      <div class="loc">Cameron Village</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Used them for stump grinding after another company removed a tree. Fast, thorough, and they cleaned up perfectly. Already booked them for two more stumps in the spring."</blockquote>
+      <div class="author">Dana H.</div>
+      <div class="loc">Five Points</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"These guys know their stuff. They identified a disease issue on one of our pines that I never would have caught. Treated it and saved the tree. Worth every penny."</blockquote>
+      <div class="author">Marcus L.</div>
+      <div class="loc">Mordecai</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <h2>Get a free tree assessment</h2>
+    <p>Not sure what your trees need? We'll come out, take a look, and give you a straight answer — no pressure, no upsells.</p>
+    <a href="mailto:hello@canopytreecare.com?subject=Free%20Quote%20Request" class="btn-white">Request a Free Quote →</a>
+    <div class="cta-phone">or call (919) 555-0182</div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <span>© 2026 Canopy Tree Care · Raleigh, NC</span>
+    <span><a href="tel:+19195550182">(919) 555-0182</a> · <a href="mailto:hello@canopytreecare.com">hello@canopytreecare.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

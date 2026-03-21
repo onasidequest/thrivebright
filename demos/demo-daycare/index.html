@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Little Roots Learning | Madison, WI</title>
+<meta name="description" content="Warm, nurturing childcare in Madison, WI. Infant care, toddler programs, and pre-K in a safe, play-based environment. Licensed and NAEYC-aligned.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; color: #2d2d2d; background: #fff; -webkit-font-smoothing: antialiased; font-size: 16px; line-height: 1.6; }
+  h1, h2, h3, h4 { font-family: 'Sora', sans-serif; }
+  img { display: block; max-width: 100%; }
+  a { text-decoration: none; }
+
+  .nav { padding: 20px 0; border-bottom: 1px solid #eee; }
+  .nav .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+  .nav-brand { font-family: 'Sora', sans-serif; font-size: 1.1rem; font-weight: 800; color: #1a1a1a; letter-spacing: 3px; text-transform: uppercase; }
+  .nav-brand em { font-style: normal; color: #d48c5a; letter-spacing: 3px; }
+  .nav-links { display: flex; gap: 28px; align-items: center; font-size: 0.9rem; color: #555; }
+  .nav-links a { color: inherit; transition: color 0.2s; }
+  .nav-links a:hover { color: #1a1a1a; }
+  .nav-cta { background: #d48c5a; color: #fff; padding: 10px 24px; border-radius: 6px; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.3px; }
+  .nav-cta:hover { background: #c07a48; }
+  .mobile-nav { display: none; }
+
+  .hero { max-width: 1080px; margin: 0 auto; padding: 48px 24px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .hero-text h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.1; color: #1a1a1a; margin-bottom: 20px; letter-spacing: -1px; }
+  .hero-text h1 span { color: #d48c5a; }
+  .hero-text p { font-size: 1.05rem; color: #666; max-width: 440px; margin-bottom: 28px; line-height: 1.7; }
+  .hero-text .hero-btns { display: flex; gap: 12px; align-items: center; }
+  .btn-dark { background: #1a1a1a; color: #fff; padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; display: inline-block; }
+  .btn-dark:hover { background: #333; }
+  .btn-text { color: #d48c5a; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; }
+  .hero-img { position: relative; }
+  .hero-img img { border-radius: 16px; width: 100%; height: 420px; object-fit: cover; }
+  .hero-img .badge { position: absolute; bottom: -16px; left: 24px; background: #fff; padding: 14px 20px; border-radius: 10px; box-shadow: 0 4px 24px rgba(0,0,0,0.1); font-size: 0.85rem; font-weight: 600; color: #1a1a1a; display: flex; align-items: center; gap: 8px; }
+  .badge-stars { color: #e8a838; }
+
+  .trust-bar { max-width: 1080px; margin: 28px auto 0; padding: 0 24px; display: flex; justify-content: center; gap: 48px; }
+  .trust-item { text-align: center; }
+  .trust-num { font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800; color: #1a1a1a; }
+  .trust-label { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+  .full-img { width: 100%; height: 320px; object-fit: cover; margin: 32px 0; }
+
+  .services { max-width: 1080px; margin: 0 auto; padding: 32px 24px 48px; }
+  .services-header { max-width: 480px; margin-bottom: 32px; }
+  .services-header h2 { font-size: 2rem; font-weight: 700; color: #1a1a1a; margin-bottom: 12px; letter-spacing: -0.5px; }
+  .services-header p { color: #777; font-size: 1rem; }
+  .services-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; }
+  .service-big { position: relative; border-radius: 14px; overflow: hidden; }
+  .service-big img { width: 100%; height: 100%; min-height: 400px; object-fit: cover; }
+  .service-big .overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 32px; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); }
+  .service-big h3 { font-size: 1.4rem; color: #fff; font-weight: 700; margin-bottom: 6px; }
+  .service-big p { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
+  .service-stack { display: flex; flex-direction: column; gap: 24px; }
+  .service-sm { border-radius: 14px; overflow: hidden; position: relative; flex: 1; }
+  .service-sm img { width: 100%; height: 100%; min-height: 188px; object-fit: cover; }
+  .service-sm .overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(to top, rgba(0,0,0,0.65), transparent); }
+  .service-sm h3 { font-size: 1.05rem; color: #fff; font-weight: 700; margin-bottom: 4px; }
+  .service-sm p { color: rgba(255,255,255,0.75); font-size: 0.82rem; }
+
+  .approach { background: #fdf6f0; padding: 48px 0; }
+  .approach .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .approach-img img { border-radius: 14px; width: 100%; height: 380px; object-fit: cover; }
+  .approach-text h2 { font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin-bottom: 20px; letter-spacing: -0.5px; }
+  .approach-list { list-style: none; }
+  .approach-list li { display: flex; gap: 14px; margin-bottom: 22px; }
+  .approach-list .dot { width: 10px; height: 10px; background: #d48c5a; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+  .approach-list h4 { font-size: 0.95rem; font-weight: 700; color: #1a1a1a; margin-bottom: 2px; }
+  .approach-list p { font-size: 0.88rem; color: #777; line-height: 1.5; }
+
+  .reviews { max-width: 1080px; margin: 0 auto; padding: 48px 24px 40px; }
+  .reviews h2 { font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin-bottom: 40px; letter-spacing: -0.5px; }
+  .reviews-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .review-card { background: #fdf6f0; border-radius: 14px; padding: 32px; }
+  .review-card .stars { color: #e8a838; font-size: 0.95rem; margin-bottom: 14px; letter-spacing: 2px; }
+  .review-card blockquote { font-size: 0.95rem; color: #444; line-height: 1.7; margin-bottom: 18px; }
+  .review-card .author { font-weight: 700; font-size: 0.85rem; color: #1a1a1a; }
+  .review-card .loc { font-size: 0.78rem; color: #999; }
+
+  .cta { background: #1a1a1a; padding: 48px 0; }
+  .cta .wrap { max-width: 640px; margin: 0 auto; padding: 0 24px; text-align: center; }
+  .cta h2 { font-size: 2.2rem; font-weight: 700; color: #fff; margin-bottom: 14px; letter-spacing: -0.5px; }
+  .cta p { color: #999; font-size: 1.05rem; margin-bottom: 32px; line-height: 1.7; }
+  .btn-white { background: #fff; color: #1a1a1a; padding: 14px 32px; border-radius: 6px; font-weight: 700; font-size: 0.95rem; display: inline-block; }
+  .btn-white:hover { background: #f0f0f0; }
+  .cta-phone { color: #666; font-size: 0.9rem; margin-top: 16px; }
+
+  footer { padding: 32px 0; border-top: 1px solid #eee; }
+  footer .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; color: #999; }
+  footer a { color: #666; }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .mobile-nav { display: block; }
+    .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 40px; }
+    .hero-text h1 { font-size: 2.1rem; }
+    .hero-img img { height: 300px; }
+    .trust-bar { flex-wrap: wrap; gap: 24px; }
+    .services-layout { grid-template-columns: 1fr; }
+    .approach .wrap { grid-template-columns: 1fr; gap: 32px; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .cta h2 { font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="wrap">
+    <div class="nav-brand">little <em>roots</em> learning</div>
+    <div class="nav-links">
+      <a href="#services">Programs</a>
+      <a href="#approach">Our Philosophy</a>
+      <a href="#reviews">Families Say</a>
+      <a href="#contact" class="nav-cta">Schedule a Tour</a>
+    </div>
+    <a href="#contact" class="nav-cta mobile-nav">Tour</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Where little ones <span>grow</span> into themselves.</h1>
+    <p>Little Roots Learning is Madison's warm, play-based childcare center. We nurture curious minds from infancy through pre-K — so your child genuinely loves coming to school.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-dark">Schedule a Tour</a>
+      <a href="#services" class="btn-text">See programs ↓</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.pexels.com/photos/3913426/pexels-photo-3913426.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Children playing together in a bright, colorful classroom in Madison">
+    <div class="badge">
+      <span class="badge-stars">★★★★★</span> 4.9 from 180+ reviews
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-item">
+    <div class="trust-num">8+</div>
+    <div class="trust-label">Years in Madison</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num">4:1</div>
+    <div class="trust-label">Child-to-Staff Ratio</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num">4.9</div>
+    <div class="trust-label">Google Rating</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num">100%</div>
+    <div class="trust-label">Licensed &amp; Insured</div>
+  </div>
+</div>
+
+<img class="full-img" src="https://images.pexels.com/photos/1001914/pexels-photo-1001914.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Children engaged in hands-on learning activities">
+
+<section class="services" id="services">
+  <div class="services-header">
+    <h2>Our programs</h2>
+    <p>Every stage of childhood is different. Our programs meet kids exactly where they are.</p>
+  </div>
+  <div class="services-layout">
+    <div class="service-big">
+      <img src="https://images.pexels.com/photos/1001914/pexels-photo-1001914.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Caregiver holding infant in warm, safe nursery room">
+      <div class="overlay">
+        <h3>Infant Care</h3>
+        <p>Ages 6 weeks – 12 months. Low ratios, consistent caregivers, and a calm environment tailored to your baby's individual rhythm.</p>
+      </div>
+    </div>
+    <div class="service-stack">
+      <div class="service-sm">
+        <img src="https://images.pexels.com/photos/3662644/pexels-photo-3662644.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Toddlers exploring sensory play materials with teacher">
+        <div class="overlay">
+          <h3>Toddler Program</h3>
+          <p>Ages 1–3. Language-rich, hands-on exploration that builds independence and social skills.</p>
+        </div>
+      </div>
+      <div class="service-sm">
+        <img src="https://images.pexels.com/photos/5471946/pexels-photo-5471946.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pre-K children working on early literacy activity at table">
+        <div class="overlay">
+          <h3>Pre-K</h3>
+          <p>Ages 3–5. Kindergarten readiness through structured play, STEM activities, and creative expression.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="approach" id="approach">
+  <div class="wrap">
+    <div class="approach-img">
+      <img src="https://images.pexels.com/photos/6623796/pexels-photo-6623796.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Teacher reading to small group of children in cozy reading corner">
+    </div>
+    <div class="approach-text">
+      <h2>A place they can't wait to come back to</h2>
+      <ul class="approach-list">
+        <li>
+          <div class="dot"></div>
+          <div>
+            <h4>Play-based, child-led learning</h4>
+            <p>We follow the child's curiosity. Play is how kids learn best — our curriculum is built around that truth.</p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div>
+            <h4>Low ratios, consistent teachers</h4>
+            <p>Your child bonds with the same caregivers every day. Relationships matter as much as curriculum.</p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div>
+            <h4>Daily photo updates</h4>
+            <p>Know what your child is up to throughout the day. Our app keeps you connected without being intrusive.</p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div>
+            <h4>Wisconsin-licensed, CPR-certified staff</h4>
+            <p>Every teacher is licensed, background-checked, and trained in early childhood development.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <h2>What families say</h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Leaving my 8-week-old was terrifying. The infant room team made me feel so supported. She literally reaches for her teachers now. That says everything."</blockquote>
+      <div class="author">Emily N.</div>
+      <div class="loc">Madison, WI</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"My son went from barely talking to reading simple words in 6 months. The pre-K program is genuinely exceptional. He was more than ready for kindergarten."</blockquote>
+      <div class="author">Bryan C.</div>
+      <div class="loc">Middleton, WI</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Communication is outstanding. I get daily photos and a report card each week. You can tell the teachers are invested in each child individually."</blockquote>
+      <div class="author">Priya M.</div>
+      <div class="loc">Fitchburg, WI</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"We visited six daycares before choosing Little Roots. The warmth was immediately different. It felt like a home, not an institution. No regrets."</blockquote>
+      <div class="author">Sarah &amp; Tom K.</div>
+      <div class="loc">Sun Prairie, WI</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap">
+    <h2>Come see it for yourself.</h2>
+    <p>Schedule a tour and meet our teachers. We'd love to show you around and answer every question — no obligation, just a conversation.</p>
+    <a href="mailto:hello@littlerootslearning.com?subject=Tour%20Request" class="btn-white">Schedule a Tour →</a>
+    <div class="cta-phone">or call (608) 555-0382</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Little Roots Learning · Madison, WI</span>
+    <span><a href="tel:+16085550382">(608) 555-0382</a> · <a href="mailto:hello@littlerootslearning.com">hello@littlerootslearning.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

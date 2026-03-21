@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Summit Air HVAC | Colorado Springs, CO</title>
+<meta name="description" content="HVAC service in Colorado Springs, CO. AC repair, heating, and duct cleaning. Fast response, fair pricing.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; color: #2d2d2d; background: #fff; -webkit-font-smoothing: antialiased; font-size: 16px; line-height: 1.6; }
+  h1, h2, h3, h4 { font-family: 'Sora', sans-serif; }
+  img { display: block; max-width: 100%; }
+  a { text-decoration: none; }
+
+  .nav { padding: 20px 0; border-bottom: 1px solid #eee; }
+  .nav .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+  .nav-brand { font-family: 'Sora', sans-serif; font-size: 1.1rem; font-weight: 800; color: #1a1a1a; letter-spacing: 3px; text-transform: uppercase; }
+  .nav-brand em { font-style: normal; color: #3a6a8a; letter-spacing: 3px; }
+  .nav-links { display: flex; gap: 28px; align-items: center; font-size: 0.9rem; color: #555; }
+  .nav-links a { color: inherit; transition: color 0.2s; }
+  .nav-links a:hover { color: #1a1a1a; }
+  .nav-cta { background: #3a6a8a; color: #fff; padding: 10px 24px; border-radius: 6px; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.3px; }
+  .nav-cta:hover { background: #2a5a7a; }
+  .mobile-nav { display: none; }
+
+  .hero { max-width: 1080px; margin: 0 auto; padding: 48px 24px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .hero-text h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.1; color: #1a1a1a; margin-bottom: 20px; letter-spacing: -1px; }
+  .hero-text h1 span { color: #3a6a8a; }
+  .hero-text p { font-size: 1.05rem; color: #666; max-width: 440px; margin-bottom: 28px; line-height: 1.7; }
+  .hero-text .hero-btns { display: flex; gap: 12px; align-items: center; }
+  .btn-dark { background: #1a1a1a; color: #fff; padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; display: inline-block; }
+  .btn-dark:hover { background: #333; }
+  .btn-text { color: #3a6a8a; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; }
+  .hero-img { position: relative; }
+  .hero-img img { border-radius: 16px; width: 100%; height: 420px; object-fit: cover; }
+  .hero-img .badge { position: absolute; bottom: -16px; left: 24px; background: #fff; padding: 14px 20px; border-radius: 10px; box-shadow: 0 4px 24px rgba(0,0,0,0.1); font-size: 0.85rem; font-weight: 600; color: #1a1a1a; display: flex; align-items: center; gap: 8px; }
+  .badge-stars { color: #e8a838; }
+
+  .trust-bar { max-width: 1080px; margin: 28px auto 0; padding: 0 24px; display: flex; justify-content: center; gap: 48px; }
+  .trust-item { text-align: center; }
+  .trust-num { font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800; color: #1a1a1a; }
+  .trust-label { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+  .divider-img { width: 100%; height: 320px; object-fit: cover; margin: 32px 0; }
+
+  .services { max-width: 1080px; margin: 0 auto; padding: 32px 24px 48px; }
+  .services-header { max-width: 480px; margin-bottom: 32px; }
+  .services-header h2 { font-size: 2rem; font-weight: 700; color: #1a1a1a; margin-bottom: 12px; letter-spacing: -0.5px; }
+  .services-header p { color: #777; font-size: 1rem; }
+  .services-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; }
+  .service-big { position: relative; border-radius: 14px; overflow: hidden; }
+  .service-big img { width: 100%; height: 100%; min-height: 400px; object-fit: cover; }
+  .service-big .overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 32px; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); }
+  .service-big h3 { font-size: 1.4rem; color: #fff; font-weight: 700; margin-bottom: 6px; }
+  .service-big p { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
+  .service-stack { display: flex; flex-direction: column; gap: 24px; }
+  .service-sm { border-radius: 14px; overflow: hidden; position: relative; flex: 1; }
+  .service-sm img { width: 100%; height: 100%; min-height: 188px; object-fit: cover; }
+  .service-sm .overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(to top, rgba(0,0,0,0.65), transparent); }
+  .service-sm h3 { font-size: 1.05rem; color: #fff; font-weight: 700; margin-bottom: 4px; }
+  .service-sm p { color: rgba(255,255,255,0.75); font-size: 0.82rem; }
+
+  .approach { background: #f5f7fa; padding: 48px 0; }
+  .approach .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .approach-img img { border-radius: 14px; width: 100%; height: 380px; object-fit: cover; }
+  .approach-text h2 { font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin-bottom: 20px; letter-spacing: -0.5px; }
+  .approach-list { list-style: none; }
+  .approach-list li { display: flex; gap: 14px; margin-bottom: 22px; }
+  .approach-list .dot { width: 10px; height: 10px; background: #3a6a8a; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+  .approach-list h4 { font-size: 0.95rem; font-weight: 700; color: #1a1a1a; margin-bottom: 2px; }
+  .approach-list p { font-size: 0.88rem; color: #777; line-height: 1.5; }
+
+  .reviews { max-width: 1080px; margin: 0 auto; padding: 48px 24px; }
+  .reviews h2 { font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin-bottom: 40px; letter-spacing: -0.5px; }
+  .reviews-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .review-card { background: #f5f7fa; border-radius: 14px; padding: 32px; }
+  .review-card .stars { color: #e8a838; font-size: 0.95rem; margin-bottom: 14px; letter-spacing: 2px; }
+  .review-card blockquote { font-size: 0.95rem; color: #444; line-height: 1.7; margin-bottom: 18px; }
+  .review-card .author { font-weight: 700; font-size: 0.85rem; color: #1a1a1a; }
+  .review-card .loc { font-size: 0.78rem; color: #999; }
+
+  .cta { background: #1a1a1a; padding: 48px 0; }
+  .cta .wrap { max-width: 640px; margin: 0 auto; padding: 0 24px; text-align: center; }
+  .cta h2 { font-size: 2.2rem; font-weight: 700; color: #fff; margin-bottom: 14px; letter-spacing: -0.5px; }
+  .cta p { color: #999; font-size: 1.05rem; margin-bottom: 32px; line-height: 1.7; }
+  .btn-white { background: #fff; color: #1a1a1a; padding: 14px 32px; border-radius: 6px; font-weight: 700; font-size: 0.95rem; display: inline-block; }
+  .btn-white:hover { background: #f0f0f0; }
+  .cta-phone { color: #666; font-size: 0.9rem; margin-top: 16px; }
+
+  footer { padding: 32px 0; border-top: 1px solid #eee; }
+  footer .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; color: #999; }
+  footer a { color: #666; }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .mobile-nav { display: block; }
+    .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 40px; }
+    .hero-text h1 { font-size: 2.1rem; }
+    .hero-img img { height: 300px; }
+    .trust-bar { flex-wrap: wrap; gap: 24px; }
+    .services-layout { grid-template-columns: 1fr; }
+    .service-big img { min-height: 280px; }
+    .approach .wrap { grid-template-columns: 1fr; gap: 32px; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .cta h2 { font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="wrap">
+    <div class="nav-brand">summit <em>air</em> hvac</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#approach">Our Approach</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact" class="nav-cta">Book Service</a>
+    </div>
+    <a href="#contact" class="nav-cta mobile-nav">Book</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Keep your home <span>comfortable</span> all year.</h1>
+    <p>Summit Air HVAC serves Colorado Springs with fast, reliable AC repair, heating service, and duct cleaning. Same-day appointments available for urgent calls.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-dark">Schedule Service</a>
+      <a href="#services" class="btn-text">See services ↓</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.pexels.com/photos/7347538/pexels-photo-7347538.jpeg?auto=compress&cs=tinysrgb&w=800" alt="HVAC technician inspecting an outdoor air conditioning unit">
+    <div class="badge">
+      <span class="badge-stars">★★★★★</span> 4.8 from 140+ reviews
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-item">
+    <div class="trust-num">15+</div>
+    <div class="trust-label">Years in Colorado Springs</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num">3,000+</div>
+    <div class="trust-label">Systems Serviced</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num">4.8</div>
+    <div class="trust-label">Google Rating</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num">24/7</div>
+    <div class="trust-label">Emergency Service</div>
+  </div>
+</div>
+
+<img class="divider-img" src="https://images.pexels.com/photos/8486972/pexels-photo-8486972.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Modern HVAC unit installed on the side of a house">
+
+<section class="services" id="services">
+  <div class="services-header">
+    <h2>What we do</h2>
+    <p>From summer AC emergencies to winter heating tune-ups — we keep Colorado Springs comfortable.</p>
+  </div>
+  <div class="services-layout">
+    <div class="service-big">
+      <img src="https://images.pexels.com/photos/7218016/pexels-photo-7218016.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Technician using gauges to check refrigerant levels on an AC unit">
+      <div class="overlay">
+        <h3>AC Repair & Tune-Up</h3>
+        <p>Fast diagnosis, honest repair. We fix what's broken and keep the rest running efficiently.</p>
+      </div>
+    </div>
+    <div class="service-stack">
+      <div class="service-sm">
+        <img src="https://images.pexels.com/photos/5835359/pexels-photo-5835359.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Technician inspecting a gas furnace with a flashlight">
+        <div class="overlay">
+          <h3>Heating Service</h3>
+          <p>Furnace repair, heat pump service, and seasonal tune-ups before the cold hits.</p>
+        </div>
+      </div>
+      <div class="service-sm">
+        <img src="https://images.pexels.com/photos/7579125/pexels-photo-7579125.jpeg?auto=compress&cs=tinysrgb&w=600" alt="HVAC technician cleaning air ducts with a vacuum">
+        <div class="overlay">
+          <h3>Duct Cleaning</h3>
+          <p>Remove allergens, dust, and buildup for cleaner air and better system efficiency.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="approach" id="approach">
+  <div class="wrap">
+    <div class="approach-img">
+      <img src="https://images.pexels.com/photos/5463575/pexels-photo-5463575.jpeg?auto=compress&cs=tinysrgb&w=800" alt="HVAC technician explaining a system to a homeowner">
+    </div>
+    <div class="approach-text">
+      <h2>Why homeowners trust us</h2>
+      <ul class="approach-list">
+        <li>
+          <div class="dot"></div>
+          <div>
+            <h4>Upfront pricing, always</h4>
+            <p>You'll know the cost before we start any work. No surprise invoices.</p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div>
+            <h4>NATE-certified technicians</h4>
+            <p>Our team holds top industry certifications — you're getting a true professional.</p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div>
+            <h4>Same-day emergency service</h4>
+            <p>When your AC goes out in July, we answer the phone and show up.</p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div>
+            <h4>We service all brands</h4>
+            <p>Carrier, Trane, Lennox, Rheem — we know them all and stock common parts.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <h2>What our clients say</h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"AC died on the hottest day of the year. Summit Air was here in two hours and had it running by evening. Absolutely incredible service."</blockquote>
+      <div class="author">Chris W.</div>
+      <div class="loc">Briargate, Colorado Springs</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Annual tune-up every fall for three years. They always find small things before they become big problems. Honest, thorough, and never oversell."</blockquote>
+      <div class="author">Denise L.</div>
+      <div class="loc">Old Colorado City</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Had duct cleaning done — the difference in air quality is noticeable. My allergies have improved noticeably. Worth every penny."</blockquote>
+      <div class="author">Kevin & Sara H.</div>
+      <div class="loc">Rockrimmon, Colorado Springs</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Our furnace stopped working in February. They came out same day, diagnosed it fast, and had parts on the truck. Heat was back on within hours."</blockquote>
+      <div class="author">Michelle P.</div>
+      <div class="loc">Broadmoor, Colorado Springs</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap">
+    <h2>Ready to schedule service?</h2>
+    <p>Whether it's a repair, tune-up, or emergency — we'll get someone out to you fast. Book online or give us a call.</p>
+    <a href="mailto:hello@summitairhvac.com?subject=Service%20Request" class="btn-white">Schedule Service →</a>
+    <div class="cta-phone">or call (719) 555-0214</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Summit Air HVAC · Colorado Springs, CO</span>
+    <span><a href="tel:+17195550214">(719) 555-0214</a> · <a href="mailto:hello@summitairhvac.com">hello@summitairhvac.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

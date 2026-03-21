@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SunPath Solar | Tucson, AZ</title>
+<meta name="description" content="Solar installation and maintenance in Tucson, AZ. Save on energy bills with expert solar from SunPath Solar.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; color: #2d2d2d; background: #fff; -webkit-font-smoothing: antialiased; font-size: 16px; line-height: 1.6; }
+  h1, h2, h3, h4 { font-family: 'Sora', sans-serif; }
+  img { display: block; max-width: 100%; }
+  a { text-decoration: none; }
+
+  .nav { padding: 20px 0; border-bottom: 1px solid #eee; }
+  .nav .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+  .nav-brand { font-family: 'Sora', sans-serif; font-size: 1.1rem; font-weight: 800; color: #1a1a1a; letter-spacing: 3px; text-transform: uppercase; }
+  .nav-brand em { font-style: normal; color: #d4952a; letter-spacing: 3px; }
+  .nav-links { display: flex; gap: 28px; align-items: center; font-size: 0.9rem; color: #555; }
+  .nav-links a { color: inherit; transition: color 0.2s; }
+  .nav-links a:hover { color: #1a1a1a; }
+  .nav-cta { background: #d4952a; color: #fff; padding: 10px 24px; border-radius: 6px; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.3px; }
+  .nav-cta:hover { background: #c0841e; }
+  .mobile-nav { display: none; }
+
+  .hero { max-width: 1080px; margin: 0 auto; padding: 48px 24px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .hero-text h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.1; color: #1a1a1a; margin-bottom: 20px; letter-spacing: -1px; }
+  .hero-text h1 span { color: #d4952a; }
+  .hero-text p { font-size: 1.05rem; color: #666; max-width: 440px; margin-bottom: 28px; line-height: 1.7; }
+  .hero-text .hero-btns { display: flex; gap: 12px; align-items: center; }
+  .btn-dark { background: #1a1a1a; color: #fff; padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; display: inline-block; }
+  .btn-dark:hover { background: #333; }
+  .btn-text { color: #d4952a; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; }
+  .hero-img { position: relative; }
+  .hero-img img { border-radius: 16px; width: 100%; height: 420px; object-fit: cover; }
+  .hero-img .badge { position: absolute; bottom: -16px; left: 24px; background: #fff; padding: 14px 20px; border-radius: 10px; box-shadow: 0 4px 24px rgba(0,0,0,0.1); font-size: 0.85rem; font-weight: 600; color: #1a1a1a; display: flex; align-items: center; gap: 8px; }
+  .badge-stars { color: #e8a838; }
+
+  .trust-bar { max-width: 1080px; margin: 28px auto 0; padding: 0 24px; display: flex; justify-content: center; gap: 48px; }
+  .trust-item { text-align: center; }
+  .trust-num { font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800; color: #1a1a1a; }
+  .trust-label { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+  .divider-img { width: 100%; height: 320px; object-fit: cover; margin: 32px 0; }
+
+  .services { max-width: 1080px; margin: 0 auto; padding: 32px 24px 48px; }
+  .services-header { max-width: 480px; margin-bottom: 32px; }
+  .services-header h2 { font-size: 2rem; font-weight: 700; color: #1a1a1a; margin-bottom: 12px; letter-spacing: -0.5px; }
+  .services-header p { color: #777; font-size: 1rem; }
+  .services-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; }
+  .service-big { position: relative; border-radius: 14px; overflow: hidden; }
+  .service-big img { width: 100%; height: 100%; min-height: 400px; object-fit: cover; }
+  .service-big .overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 32px; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); }
+  .service-big h3 { font-size: 1.4rem; color: #fff; font-weight: 700; margin-bottom: 6px; }
+  .service-big p { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
+  .service-stack { display: flex; flex-direction: column; gap: 24px; }
+  .service-sm { border-radius: 14px; overflow: hidden; position: relative; flex: 1; }
+  .service-sm img { width: 100%; height: 100%; min-height: 188px; object-fit: cover; }
+  .service-sm .overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(to top, rgba(0,0,0,0.65), transparent); }
+  .service-sm h3 { font-size: 1.05rem; color: #fff; font-weight: 700; margin-bottom: 4px; }
+  .service-sm p { color: rgba(255,255,255,0.75); font-size: 0.82rem; }
+
+  .approach { background: #fdf8f0; padding: 48px 0; }
+  .approach .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .approach-img img { border-radius: 14px; width: 100%; height: 380px; object-fit: cover; }
+  .approach-text h2 { font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin-bottom: 20px; letter-spacing: -0.5px; }
+  .approach-list { list-style: none; }
+  .approach-list li { display: flex; gap: 14px; margin-bottom: 22px; }
+  .approach-list .dot { width: 10px; height: 10px; background: #d4952a; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+  .approach-list h4 { font-size: 0.95rem; font-weight: 700; color: #1a1a1a; margin-bottom: 2px; }
+  .approach-list p { font-size: 0.88rem; color: #777; line-height: 1.5; }
+
+  .reviews { max-width: 1080px; margin: 0 auto; padding: 48px 24px; }
+  .reviews h2 { font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin-bottom: 40px; letter-spacing: -0.5px; }
+  .reviews-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .review-card { background: #fdf8f0; border-radius: 14px; padding: 32px; }
+  .review-card .stars { color: #e8a838; font-size: 0.95rem; margin-bottom: 14px; letter-spacing: 2px; }
+  .review-card blockquote { font-size: 0.95rem; color: #444; line-height: 1.7; margin-bottom: 18px; }
+  .review-card .author { font-weight: 700; font-size: 0.85rem; color: #1a1a1a; }
+  .review-card .loc { font-size: 0.78rem; color: #999; }
+
+  .cta { background: #1a1a1a; padding: 48px 0; }
+  .cta .wrap { max-width: 640px; margin: 0 auto; padding: 0 24px; text-align: center; }
+  .cta h2 { font-size: 2.2rem; font-weight: 700; color: #fff; margin-bottom: 14px; letter-spacing: -0.5px; }
+  .cta p { color: #999; font-size: 1.05rem; margin-bottom: 32px; line-height: 1.7; }
+  .btn-white { background: #fff; color: #1a1a1a; padding: 14px 32px; border-radius: 6px; font-weight: 700; font-size: 0.95rem; display: inline-block; }
+  .btn-white:hover { background: #f0f0f0; }
+  .cta-phone { color: #666; font-size: 0.9rem; margin-top: 16px; }
+
+  footer { padding: 32px 0; border-top: 1px solid #eee; }
+  footer .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; color: #999; }
+  footer a { color: #666; }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .mobile-nav { display: block; }
+    .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 40px; }
+    .hero-text h1 { font-size: 2.1rem; }
+    .hero-img img { height: 300px; }
+    .trust-bar { flex-wrap: wrap; gap: 24px; }
+    .services-layout { grid-template-columns: 1fr; }
+    .service-big img { min-height: 280px; }
+    .approach .wrap { grid-template-columns: 1fr; gap: 32px; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .cta h2 { font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="wrap">
+    <div class="nav-brand">sunpath <em>solar</em></div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#approach">Our Approach</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact" class="nav-cta">Get a Quote</a>
+    </div>
+    <a href="#contact" class="nav-cta mobile-nav">Quote</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Tucson's sun is your <span>biggest asset.</span></h1>
+    <p>SunPath Solar installs, maintains, and audits solar systems across Tucson. Cut your electric bill, increase home value, and stop sending money to the utility.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-dark">Get a Free Quote</a>
+      <a href="#services" class="btn-text">See services ↓</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.pexels.com/photos/3889826/pexels-photo-3889826.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Rows of solar panels installed on a residential rooftop under bright Arizona sun">
+    <div class="badge">
+      <span class="badge-stars">★★★★★</span> 4.9 from 95+ reviews
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-item">
+    <div class="trust-num">8+</div>
+    <div class="trust-label">Years in Tucson</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num">400+</div>
+    <div class="trust-label">Systems Installed</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num">$1.2M</div>
+    <div class="trust-label">Customer Savings</div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-num">25yr</div>
+    <div class="trust-label">Panel Warranty</div>
+  </div>
+</div>
+
+<img class="divider-img" src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Wide shot of solar panels on a desert home at golden hour">
+
+<section class="services" id="services">
+  <div class="services-header">
+    <h2>What we do</h2>
+    <p>From your first panel to a full energy audit — we make solar simple and profitable.</p>
+  </div>
+  <div class="services-layout">
+    <div class="service-big">
+      <img src="https://images.pexels.com/photos/4254159/pexels-photo-4254159.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Solar installer on a roof securing a solar panel to mounting rails">
+      <div class="overlay">
+        <h3>Solar Installation</h3>
+        <p>Custom-designed systems for your roof, your usage, and your goals. Permits handled, start to finish.</p>
+      </div>
+    </div>
+    <div class="service-stack">
+      <div class="service-sm">
+        <img src="https://images.pexels.com/photos/9875414/pexels-photo-9875414.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Technician cleaning solar panels with a squeegee and water">
+        <div class="overlay">
+          <h3>Solar Maintenance</h3>
+          <p>Panel cleaning, inverter checks, and system monitoring to keep production at peak.</p>
+        </div>
+      </div>
+      <div class="service-sm">
+        <img src="https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Energy advisor reviewing a home's power consumption data on a tablet">
+        <div class="overlay">
+          <h3>Energy Audit</h3>
+          <p>Find where you're losing money and build a plan to reclaim it — solar and beyond.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="approach" id="approach">
+  <div class="wrap">
+    <div class="approach-img">
+      <img src="https://images.pexels.com/photos/2570779/pexels-photo-2570779.jpeg?auto=compress&cs=tinysrgb&w=800" alt="SunPath Solar technician reviewing a system diagram with a homeowner">
+    </div>
+    <div class="approach-text">
+      <h2>How we're different</h2>
+      <ul class="approach-list">
+        <li>
+          <div class="dot"></div>
+          <div>
+            <h4>No-pressure consultations</h4>
+            <p>We show you the numbers honestly. If solar doesn't pencil out for you, we'll tell you.</p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div>
+            <h4>We handle the paperwork</h4>
+            <p>Permits, utility interconnection, and federal tax credit documentation — all on us.</p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div>
+            <h4>Local installers, not subcontractors</h4>
+            <p>Our own certified crew does every install. No third-party handoffs.</p>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div>
+            <h4>Monitoring included for 5 years</h4>
+            <p>We watch your system's output and alert you if something's off — before you notice.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <h2>What our clients say</h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"My electric bill went from $280/month to $14. I wish I'd done this five years ago. SunPath made the whole process painless."</blockquote>
+      <div class="author">Robert A.</div>
+      <div class="loc">Oro Valley, Tucson</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"From quote to final inspection in under 3 weeks. Professional crew, clean install, and they walked me through everything the system does."</blockquote>
+      <div class="author">Carmen V.</div>
+      <div class="loc">Marana, Tucson</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Had an underperforming system installed by another company. SunPath's energy audit found the issue in 20 minutes. Fixed same day."</blockquote>
+      <div class="author">Steve & Jan M.</div>
+      <div class="loc">Sahuarita, Tucson</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Incredibly knowledgeable team. They sized the system perfectly and even recommended a battery backup I hadn't considered. Very happy."</blockquote>
+      <div class="author">Patricia O.</div>
+      <div class="loc">Catalina Foothills, Tucson</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap">
+    <h2>Start saving on day one.</h2>
+    <p>Get a free solar quote for your Tucson home. We'll analyze your roof, your usage, and your potential savings — no obligation.</p>
+    <a href="mailto:hello@sunpathsolar.com?subject=Free%20Solar%20Quote" class="btn-white">Get Your Free Quote →</a>
+    <div class="cta-phone">or call (520) 555-0361</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 SunPath Solar · Tucson, AZ</span>
+    <span><a href="tel:+15205550361">(520) 555-0361</a> · <a href="mailto:hello@sunpathsolar.com">hello@sunpathsolar.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
